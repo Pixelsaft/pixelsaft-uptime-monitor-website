@@ -67,24 +67,11 @@ Edit `docs/db.json` to add your services:
 }
 ```
 
-## Custom Domain
-
-To use a custom domain:
-
-1. Go to Settings → Pages
-2. Enter your domain in "Custom domain"
-3. Configure DNS A records to point to GitHub's IPs:
-   - `185.199.108.153`
-   - `185.199.109.153`
-   - `185.199.110.153`
-   - `185.199.111.153`
-
 ## Local Development
 
 ```bash
 npm install
 npm run dev              # Start development server with auto-reload
-npm run start            # Start production server
 npm run checkAndUpdateDb # Run uptime check manually
 ```
 
