@@ -98,8 +98,7 @@ function migrateServiceStructure(oldService) {
       address: oldService.address,
       type: oldService.type,
       port: oldService.port || null,
-      timeout: oldService.timeout || 5,
-      checkInterval: oldService.checkInterval || 300
+      timeout: oldService.timeout || 5
     },
     status: {
       isUp: oldService.isUp || true,
@@ -182,16 +181,10 @@ async function main() {
 
   for (const service of services) {
     const config = service.config;
-    const timeSinceLastCheck = Math.floor(Date.now() / 1000) - service.status.lastCheck;
 
-    // Check if service needs to be checked
-    const shouldCheck = (timeSinceLastCheck >= config.checkInterval) ||
-                       (!service.status.isUp && timeSinceLastCheck >= 60);
+    console.log(`Checking ${config.address}${config.port ? ':' + config.port : ''}...`);
 
-    if (shouldCheck) {
-      console.log(`Checking ${config.address}${config.port ? ':' + config.port : ''}...`);
-
-      let result;
+    let result;
       if (config.type === 'url') {
         result = await checkUrl(config.address, config.timeout * 1000);
       } else {
@@ -251,7 +244,8 @@ async function main() {
       if (!service.status.isUp) {
         console.warn(`🚨 SERVICE DOWN: ${config.address}${config.port ? ':' + config.port : ''}`);
       }
-    }
+
+      checkExecuted = true;
   }
 
   if (checkExecuted) {
