@@ -2,7 +2,7 @@
 
 Automated uptime monitoring for web services, servers, and network ports with GitHub Actions.
 
-**That's it!**
+That's it!
 
 ## Features
 
