@@ -16,9 +16,10 @@ Automated uptime monitoring for web services, servers, and network ports with Gi
 ## Quick Start
 
 1. **Fork this repository**
-2. **Enable GitHub Pages** in Settings → Pages → Source: GitHub Actions
-3. **Configure services** in `docs/db.json` (see below)
-4. **Your monitor** will be at `https://username.github.io/repo-name/`
+2. **Configure services** in `docs/db.json` (see below)
+3. **Commit changes** to your fork
+4. **Enable GitHub Pages** in Settings → Pages → Source: GitHub Actions
+5. **Your monitor** will be at `https://username.github.io/repo-name/`
 
 ## Live Example
 
