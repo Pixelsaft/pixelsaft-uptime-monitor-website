@@ -1,0 +1,17 @@
+{
+  "name": "uptime-monitor",
+  "version": "1.0.0",
+  "description": "Minimal uptime monitoring with GitHub Actions and Pages",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "checkAndUpdateDb": "node check-and-update-db.js"
+  },
+  "keywords": [
+    "uptime",
+    "monitoring",
+    "github-actions",
+    "github-pages"
+  ],
+  "license": "MIT"
+}

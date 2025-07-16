@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヘ( ^o^)ノ＼(^_^ )</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>It works?</h1>
+    </header>
+    <hr>
+    <main>
+      <p>Uptime monitoring for services, servers, and network ports with GitHub Actions.</p>
+      <p>That's it!</p>
+      <section>
+        <h2>Service Status</h2>
+        <template id="service-template">
+          <li class="service">
+            <span class="status"></span>
+            <dl class="service-info">
+              <dt class="service-name"></dt>
+              <dd class="service-type"></dd>
+            </dl>
+            <div class="uptime">
+              <data class="uptime-main"></data>
+              <data class="uptime-detail"></data>
+            </div>
+          </li>
+        </template>
+
+        <div id="app" data-loading="true">
+          <ul>
+            <li class="service">
+              <span class="status"></span>
+              <dl class="service-info">
+                <dt class="service-name"></dt>
+                <dd class="service-type"></dd>
+              </dl>
+              <div class="uptime">
+                <data class="uptime-main"></data>
+                <data class="uptime-detail"></data>
+              </div>
+            </li>
+            <li class="service">
+              <span class="status"></span>
+              <dl class="service-info">
+                <dt class="service-name"></dt>
+                <dd class="service-type"></dd>
+              </dl>
+              <div class="uptime">
+                <data class="uptime-main"></data>
+                <data class="uptime-detail"></data>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <hr>
+    <footer>
+      <p>Last updated:
+        <span id="last-updated">-</span>
+      </p>
+    </footer>
+  </body>
+</html>

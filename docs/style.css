@@ -1,0 +1,209 @@
+:root {
+    --color-background: white;
+    --color-background-contrast: #efefef;
+    --color-text: black;
+    --color-success: #228b22;
+    --color-danger: #dc143c;
+    --flow-space: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: black;
+        --color-background-contrast: #595959;
+        --color-text: white;
+    }
+}
+
+html {
+    height: 100%;
+    background: var(--color-background);
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-block: 0;
+    margin-inline: auto;
+    max-inline-size: 480px;
+    min-block-size: calc(100% - 8rem);
+    overflow-wrap: break-word;
+    padding-block: 4rem;
+    padding-inline: 2rem;
+}
+
+header > :first-child,
+main > :first-child,
+footer > :first-child {
+    margin-block-start: 0;
+}
+
+header > :last-child,
+main > :last-child,
+footer > :last-child {
+    margin-block-end: 0;
+}
+
+h1,
+h2 {
+    margin-block-start: calc(var(--flow-space) * 2);
+    margin-block-end: var(--flow-space);
+}
+
+hr {
+    margin-block: calc(var(--flow-space) * 2);
+    border: 0;
+}
+
+hr::before {
+    content: "/////";
+}
+
+hr::after {
+    content: attr(data-content) "/////";
+}
+
+p {
+    margin-block: var(--flow-space);
+}
+
+li {
+    margin-block: 0.4rem 0;
+}
+
+#app ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#app ul li + li {
+    margin-block-start: calc(var(--flow-space) * 0.75);
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.status {
+    font-weight: bold;
+    min-width: 60px;
+    flex-shrink: 0;
+}
+
+.status.up {
+    color: var(--color-success);
+}
+
+.status.down {
+    color: var(--color-danger);
+}
+
+.service-info {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+.service-info dt {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1rem;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.service-info dd {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.7;
+    margin: 0;
+}
+
+.uptime {
+    font-weight: bold;
+    min-width: 80px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.uptime data {
+    display: block;
+}
+
+.uptime-main {
+    font-weight: bold;
+}
+
+.uptime-detail {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.7;
+    font-weight: normal;
+}
+
+/* Skeleton loading - reuse existing classes with data-loading */
+#app[data-loading="true"] .status,
+#app[data-loading="true"] .service-name,
+#app[data-loading="true"] .service-type,
+#app[data-loading="true"] .uptime-main,
+#app[data-loading="true"] .uptime-detail {
+    background: var(--color-background-contrast);
+    border-radius: 2px;
+    color: transparent;
+}
+
+#app[data-loading="true"] .status {
+    width: 4ch;
+    height: 1lh;
+}
+
+#app[data-loading="true"] .service-name {
+    width: 25ch;
+    height: 1lh;
+}
+
+#app[data-loading="true"] .service-type {
+    width: 8ch;
+    height: 0.8lh;
+}
+
+#app[data-loading="true"] .uptime-main {
+    width: 10ch;
+    height: 1lh;
+}
+
+#app[data-loading="true"] .uptime-detail {
+    width: 8ch;
+    height: 0.8lh;
+}
+
+/* Mobile first: stack on small screens */
+@media (max-width: 480px) {
+    .service {
+        flex-direction: column;
+        gap: 0.25rem;
+        align-items: flex-start;
+    }
+
+    .status {
+        min-width: auto;
+    }
+
+    .uptime {
+        text-align: left;
+        min-width: auto;
+    }
+
+    .uptime data {
+        display: block;
+        text-align: left;
+    }
+}
