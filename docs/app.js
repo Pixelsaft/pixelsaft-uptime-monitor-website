@@ -16,7 +16,7 @@ async function loadData () {
 function createServiceElement(service = null) {
   const template = document.getElementById('service-template')
   const element = template.content.cloneNode(true)
-  
+
   if (service) {
     // Fill with real data
     element.querySelector('.status').textContent = service.status.isUp ? 'UP' : 'DOWN'
@@ -28,7 +28,7 @@ function createServiceElement(service = null) {
     element.querySelector('.uptime-detail').textContent = `${service.stats['30d'].uptime.toFixed(1)}% (30d)`
     element.querySelector('.uptime-detail').setAttribute('value', service.stats['30d'].uptime)
   }
-  
+
   return element
 }
 
@@ -72,7 +72,7 @@ function showSkeleton () {
   container.setAttribute('data-loading', 'true')
   container.innerHTML = '<ul></ul>'
   const ul = container.querySelector('ul')
-  
+
   // Create 2 skeleton items using the same template
   ul.appendChild(createServiceElement())
   ul.appendChild(createServiceElement())
