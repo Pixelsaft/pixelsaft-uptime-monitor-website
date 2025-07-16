@@ -6,7 +6,7 @@ Automated uptime monitoring for web services, servers, and network ports with Gi
 
 ## Features
 
-- **Automated monitoring** - Runs every 5 minutes via GitHub Actions
+- **Automated monitoring** - Runs every 15 minutes via GitHub Actions
 - **Multiple protocols** - HTTP/HTTPS URLs and TCP port monitoring
 - **Uptime tracking** - 30-day and 365-day uptime percentages
 - **Mobile responsive** - Clean, minimal design inspired by [pixelsaft.wtf](https://pixelsaft.wtf/)
@@ -22,7 +22,7 @@ Automated uptime monitoring for web services, servers, and network ports with Gi
 
 ## Live Example
 
-See it in action: **https://status.pixelsaft.wtf**
+See it in action: **<https://status.pixelsaft.wtf>**
 
 ## Service Configuration
 
@@ -70,12 +70,13 @@ Edit `docs/db.json` to add your services:
 ## Custom Domain
 
 To use a custom domain:
+
 1. Go to Settings → Pages
 2. Enter your domain in "Custom domain"
 3. Configure DNS A records to point to GitHub's IPs:
    - `185.199.108.153`
    - `185.199.109.153`
-   - `185.199.110.153`  
+   - `185.199.110.153`
    - `185.199.111.153`
 
 ## Local Development
@@ -121,7 +122,7 @@ Following the **pixelsaft.wtf** approach:
 
 ## How It Works
 
-1. **GitHub Actions** runs every 5 minutes
+1. **GitHub Actions** runs every 15 minutes
 2. **Node.js script** checks each service (HTTP/TCP)
 3. **Updates JSON database** with results and uptime stats
 4. **Commits changes** back to repository
@@ -130,4 +131,3 @@ Following the **pixelsaft.wtf** approach:
 ## License
 
 MIT
-# Reactivate scheduled workflow
