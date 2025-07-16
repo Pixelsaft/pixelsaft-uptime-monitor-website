@@ -37,7 +37,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update uptime data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+            git commit -m "chore(db.json): update uptime data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
             git pull --rebase origin main
             git push
           fi
