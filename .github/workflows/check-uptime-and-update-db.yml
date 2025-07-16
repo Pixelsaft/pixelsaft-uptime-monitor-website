@@ -1,4 +1,4 @@
-name: uptime-check
+name: check-uptime-and-update-db
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  check:
+  check-uptime-and-update-db:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
