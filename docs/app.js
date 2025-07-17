@@ -67,17 +67,6 @@ function updateFooter (timestamp) {
   document.getElementById('last-updated').textContent = date.toLocaleString()
 }
 
-function showSkeleton () {
-  const container = document.getElementById('app')
-  container.setAttribute('data-loading', 'true')
-  container.innerHTML = '<ul></ul>'
-  const ul = container.querySelector('ul')
-
-  // Create 2 skeleton items using the same template
-  ul.appendChild(createServiceElement())
-  ul.appendChild(createServiceElement())
-}
-
 // Load data on page load (skeleton already showing from HTML)
 loadData()
 
