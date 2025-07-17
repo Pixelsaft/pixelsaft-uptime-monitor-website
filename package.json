@@ -1,7 +1,7 @@
 {
-  "name": "uptime-monitor",
+  "name": "pixelsaft-uptime-monitor-website",
   "version": "1.0.0",
-  "description": "Minimal uptime monitoring with GitHub Actions and Pages",
+  "description": "Automated uptime monitoring for web services, servers, and network ports with GitHub Actions.",
   "scripts": {
     "dev": "node --watch server.js",
     "start": "node server.js",
