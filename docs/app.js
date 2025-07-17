@@ -1,6 +1,6 @@
 async function loadData () {
   try {
-    const response = await fetch('./db.json')
+    const response = await fetch(`./db.json?t=${Date.now()}`)
     const services = await response.json()
 
     updateServices(services)
@@ -27,7 +27,7 @@ function createServiceElement(service = null) {
     element.querySelector('.uptime-main').setAttribute('value', service.stats['365d'].uptime)
     element.querySelector('.uptime-detail').textContent = `${service.stats['30d'].uptime.toFixed(1)}% (30d)`
     element.querySelector('.uptime-detail').setAttribute('value', service.stats['30d'].uptime)
-    
+
     // Populate extended data
     element.querySelector('.response-time').textContent = `${service.status.lastResultDuration}ms`
     element.querySelector('.last-check').textContent = formatDate(service.status.lastCheck * 1000)
@@ -41,14 +41,14 @@ function formatDate(timestamp) {
   const date = new Date(timestamp)
   const now = new Date()
   const diff = now - date
-  
+
   if (diff < 60000) return 'Just now'
   if (diff < 3600000) return `${Math.floor(diff / 60000)}m ago`
   if (diff < 86400000) return `${Math.floor(diff / 3600000)}h ago`
-  
-  return date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], { 
-    hour: '2-digit', 
-    minute: '2-digit' 
+
+  return date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit'
   })
 }
 
