@@ -37,15 +37,15 @@ body {
     padding-inline: 2rem;
 }
 
-header > :first-child,
-main > :first-child,
-footer > :first-child {
+header> :first-child,
+main> :first-child,
+footer> :first-child {
     margin-block-start: 0;
 }
 
-header > :last-child,
-main > :last-child,
-footer > :last-child {
+header> :last-child,
+main> :last-child,
+footer> :last-child {
     margin-block-end: 0;
 }
 
@@ -86,20 +86,103 @@ li {
     margin: 0;
 }
 
-#app ul li + li {
+#app ul li+li {
     margin-block-start: calc(var(--flow-space) * 0.75);
 }
 
 .service {
+    margin: 0;
+    padding: 0;
+}
+
+.service details {
+    margin: 0;
+    padding: 0;
+}
+
+.service-summary {
+    cursor: pointer;
+}
+
+.service-summary .status {
+    display: inline-flex;
+}
+
+.service-summary .service-wrapper {
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--flow-space);
+}
+
+.service-summary .service-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.service-summary .service-info dt {
+    margin: 0;
+    margin-bottom: 0.2rem;
+}
+
+.service-summary .service-info dd {
+    margin: 0;
+}
+
+.service-summary .uptime {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.service-summary .uptime data {
+    display: block;
+}
+
+.service-summary .uptime-main {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+.service-summary .uptime-detail {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.7;
+    font-weight: normal;
+}
+
+.service-details {
+    margin-top: calc(var(--flow-space) / 2);
+    padding: 0.5ch 1ch;
+    background: var(--color-background-contrast);
+    border-radius: 0.5ch;
+    margin-block-end: var(--flow-space);
+}
+
+.service-stats {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5ch 1ch;
+    align-items: baseline;
+}
+
+.service-stats dt {
+    font-weight: bold;
+    margin: 0;
+    color: var(--color-text);
+    opacity: 0.8;
+}
+
+.service-stats dd {
+    margin: 0;
+    font-family: inherit;
+    text-align: right;
 }
 
 .status {
+    display: inline-flex;
     font-weight: bold;
-    min-width: 60px;
+    min-width: 4ch;
     flex-shrink: 0;
 }
 
@@ -115,6 +198,7 @@ li {
     flex: 1;
     min-width: 0;
     overflow-wrap: break-word;
+    gap: 1ch;
 }
 
 .service-info dt {
@@ -134,8 +218,7 @@ li {
 }
 
 .uptime {
-    font-weight: bold;
-    min-width: 80px;
+    min-width: 6ch;
     text-align: right;
     flex-shrink: 0;
 }
@@ -162,7 +245,7 @@ li {
 #app[data-loading="true"] .uptime-main,
 #app[data-loading="true"] .uptime-detail {
     background: var(--color-background-contrast);
-    border-radius: 2px;
+    border-radius: 0.5ch;
     color: transparent;
 }
 
@@ -193,23 +276,48 @@ li {
 
 /* Mobile first: stack on small screens */
 @media (max-width: 480px) {
-    .service {
+    .service-summary {
+        line-height: 1.5;
+    }
+
+    .service-summary .service-wrapper {
+        display: block;
+    }
+
+    .service-summary .service-info {
         flex-direction: column;
-        gap: 0.25rem;
         align-items: flex-start;
     }
 
-    .status {
-        min-width: auto;
+    .service-summary .service-info dd {
+        margin-left: 0;
     }
 
-    .uptime {
+    .service-summary .uptime {
+        flex-direction: column;
+        align-items: flex-start;
         text-align: left;
-        min-width: auto;
     }
 
-    .uptime data {
-        display: block;
+    .service-summary .uptime-main,
+    .service-summary .uptime-detail {
         text-align: left;
+    }
+
+    .service-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .service-stats dd {
+        text-align: initial;
+    }
+
+    .service-stats dt {
+        font-weight: bold;
+        margin-top: 1ch;
+    }
+
+    .service-stats dt:first-child {
+        margin-top: 0;
     }
 }

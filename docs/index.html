@@ -19,41 +19,89 @@
         <h2>Service Status</h2>
         <template id="service-template">
           <li class="service">
-            <span class="status"></span>
-            <dl class="service-info">
-              <dt class="service-name"></dt>
-              <dd class="service-type"></dd>
-            </dl>
-            <div class="uptime">
-              <data class="uptime-main"></data>
-              <data class="uptime-detail"></data>
-            </div>
+            <details>
+              <summary class="service-summary">
+                <span class="status"></span>
+                <div class="service-wrapper">
+                  <div class="service-info">
+                    <dt class="service-name"></dt>
+                    <dd class="service-type"></dd>
+                  </div>
+                  <div class="uptime">
+                    <data class="uptime-main"></data>
+                    <data class="uptime-detail"></data>
+                  </div>
+                </div>
+              </summary>
+              <div class="service-details">
+                <dl class="service-stats">
+                  <dt>Response Time</dt>
+                  <dd class="response-time"></dd>
+                  <dt>Last Check</dt>
+                  <dd class="last-check"></dd>
+                  <dt>All Time Uptime</dt>
+                  <dd class="all-time-uptime"></dd>
+                </dl>
+              </div>
+            </details>
           </li>
         </template>
 
         <div id="app" data-loading="true">
           <ul>
             <li class="service">
-              <span class="status"></span>
-              <dl class="service-info">
-                <dt class="service-name"></dt>
-                <dd class="service-type"></dd>
-              </dl>
-              <div class="uptime">
-                <data class="uptime-main"></data>
-                <data class="uptime-detail"></data>
-              </div>
+              <details>
+                <summary class="service-summary">
+                  <span class="status"></span>
+                  <div class="service-wrapper">
+                    <div class="service-info">
+                      <dt class="service-name"></dt>
+                      <dd class="service-type"></dd>
+                    </div>
+                    <div class="uptime">
+                      <data class="uptime-main"></data>
+                      <data class="uptime-detail"></data>
+                    </div>
+                  </div>
+                </summary>
+                <div class="service-details">
+                  <dl class="service-stats">
+                    <dt>Response Time</dt>
+                    <dd class="response-time"></dd>
+                    <dt>Last Check</dt>
+                    <dd class="last-check"></dd>
+                    <dt>All Time Uptime</dt>
+                    <dd class="all-time-uptime"></dd>
+                  </dl>
+                </div>
+              </details>
             </li>
             <li class="service">
-              <span class="status"></span>
-              <dl class="service-info">
-                <dt class="service-name"></dt>
-                <dd class="service-type"></dd>
-              </dl>
-              <div class="uptime">
-                <data class="uptime-main"></data>
-                <data class="uptime-detail"></data>
-              </div>
+              <details>
+                <summary class="service-summary">
+                  <span class="status"></span>
+                  <div class="service-wrapper">
+                    <div class="service-info">
+                      <dt class="service-name"></dt>
+                      <dd class="service-type"></dd>
+                    </div>
+                    <div class="uptime">
+                      <data class="uptime-main"></data>
+                      <data class="uptime-detail"></data>
+                    </div>
+                  </div>
+                </summary>
+                <div class="service-details">
+                  <dl class="service-stats">
+                    <dt>Response Time</dt>
+                    <dd class="response-time"></dd>
+                    <dt>Last Check</dt>
+                    <dd class="last-check"></dd>
+                    <dt>All Time Uptime</dt>
+                    <dd class="all-time-uptime"></dd>
+                  </dl>
+                </div>
+              </details>
             </li>
           </ul>
         </div>
