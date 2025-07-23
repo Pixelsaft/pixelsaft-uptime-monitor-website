@@ -111,16 +111,16 @@ function migrateServiceStructure(oldService) {
         successful: oldService.successfulChecks || oldService.checks?.successful || 0
       },
       '30d': {
-        total: oldService.checks?.total30d || 0,
-        successful: oldService.checks?.successful30d || 0,
-        uptime: oldService.uptime?.['30d'] || 100.0,
-        lastReset: oldService.checks?.lastReset30d || now
+        total: 0,
+        successful: 0,
+        uptime: 100.0,
+        lastReset: now
       },
       '365d': {
-        total: oldService.checks?.total365d || 0,
-        successful: oldService.checks?.successful365d || 0,
-        uptime: oldService.uptime?.['365d'] || 100.0,
-        lastReset: oldService.checks?.lastReset365d || now
+        total: 0,
+        successful: 0,
+        uptime: 100.0,
+        lastReset: now
       }
     }
   };
@@ -196,26 +196,26 @@ async function main() {
       service.status.lastCheck = Math.floor(Date.now() / 1000);
       service.status.isUp = (result.result === 'ConnectOK');
 
-      // Reset counters if they're too old
+      // Reset period counters if needed
       const currentTime = Math.floor(Date.now() / 1000);
       const thirtyDaysAgo = currentTime - (30 * 24 * 60 * 60);
       const threeSixtyFiveDaysAgo = currentTime - (365 * 24 * 60 * 60);
 
-      // Reset 30d counters if last reset was more than 30 days ago
+      // Reset 30d counters if more than 30 days have passed
       if (service.stats['30d'].lastReset < thirtyDaysAgo) {
         service.stats['30d'].total = 0;
         service.stats['30d'].successful = 0;
         service.stats['30d'].lastReset = currentTime;
       }
 
-      // Reset 365d counters if last reset was more than 365 days ago
+      // Reset 365d counters if more than 365 days have passed  
       if (service.stats['365d'].lastReset < threeSixtyFiveDaysAgo) {
         service.stats['365d'].total = 0;
         service.stats['365d'].successful = 0;
         service.stats['365d'].lastReset = currentTime;
       }
 
-      // Update all counters
+      // Update counters
       service.stats.allTime.total++;
       service.stats['30d'].total++;
       service.stats['365d'].total++;
@@ -226,13 +226,17 @@ async function main() {
         service.stats['365d'].successful++;
       }
 
-      // Calculate uptime percentages
+      // Calculate uptime percentages with 2 decimal precision
+      service.stats.allTime.uptime = service.stats.allTime.total > 0
+        ? Math.round((service.stats.allTime.successful / service.stats.allTime.total) * 10000) / 100
+        : 100.0;
+
       service.stats['30d'].uptime = service.stats['30d'].total > 0
-        ? Math.round((service.stats['30d'].successful / service.stats['30d'].total) * 1000) / 10
+        ? Math.round((service.stats['30d'].successful / service.stats['30d'].total) * 10000) / 100
         : 100.0;
 
       service.stats['365d'].uptime = service.stats['365d'].total > 0
-        ? Math.round((service.stats['365d'].successful / service.stats['365d'].total) * 1000) / 10
+        ? Math.round((service.stats['365d'].successful / service.stats['365d'].total) * 10000) / 100
         : 100.0;
 
       checkExecuted = true;
