@@ -8,7 +8,167 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1753634390,
+      "lastCheck": 1753635091,
+      "lastResultDuration": 236
+    },
+    "stats": {
+      "allTime": {
+        "total": 902,
+        "successful": 902,
+        "uptime": 100
+      },
+      "30d": {
+        "total": 902,
+        "successful": 902,
+        "uptime": 100,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 902,
+        "successful": 902,
+        "uptime": 100,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "mail.agenturserver.de",
+      "type": "host",
+      "port": "993",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1753635091,
+      "lastResultDuration": 224
+    },
+    "stats": {
+      "allTime": {
+        "total": 901,
+        "successful": 901,
+        "uptime": 100
+      },
+      "30d": {
+        "total": 901,
+        "successful": 901,
+        "uptime": 100,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 901,
+        "successful": 901,
+        "uptime": 100,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "mail.agenturserver.de",
+      "type": "host",
+      "port": "110",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1753635092,
+      "lastResultDuration": 224
+    },
+    "stats": {
+      "allTime": {
+        "total": 901,
+        "successful": 901,
+        "uptime": 100
+      },
+      "30d": {
+        "total": 901,
+        "successful": 901,
+        "uptime": 100,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 901,
+        "successful": 901,
+        "uptime": 100,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "mail.agenturserver.de",
+      "type": "host",
+      "port": "995",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1753635092,
+      "lastResultDuration": 114
+    },
+    "stats": {
+      "allTime": {
+        "total": 901,
+        "successful": 901,
+        "uptime": 100
+      },
+      "30d": {
+        "total": 901,
+        "successful": 901,
+        "uptime": 100,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 901,
+        "successful": 901,
+        "uptime": 100,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "mail.agenturserver.de",
+      "type": "host",
+      "port": "465",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1753635092,
+      "lastResultDuration": 112
+    },
+    "stats": {
+      "allTime": {
+        "total": 901,
+        "successful": 901,
+        "uptime": 100
+      },
+      "30d": {
+        "total": 901,
+        "successful": 901,
+        "uptime": 100,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 901,
+        "successful": 901,
+        "uptime": 100,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "mail.agenturserver.de",
+      "type": "host",
+      "port": "587",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1753635092,
       "lastResultDuration": 231
     },
     "stats": {
@@ -33,166 +193,6 @@
   },
   {
     "config": {
-      "address": "mail.agenturserver.de",
-      "type": "host",
-      "port": "993",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1753634390,
-      "lastResultDuration": 221
-    },
-    "stats": {
-      "allTime": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100
-      },
-      "30d": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "mail.agenturserver.de",
-      "type": "host",
-      "port": "110",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1753634391,
-      "lastResultDuration": 223
-    },
-    "stats": {
-      "allTime": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100
-      },
-      "30d": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "mail.agenturserver.de",
-      "type": "host",
-      "port": "995",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1753634391,
-      "lastResultDuration": 223
-    },
-    "stats": {
-      "allTime": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100
-      },
-      "30d": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "mail.agenturserver.de",
-      "type": "host",
-      "port": "465",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1753634391,
-      "lastResultDuration": 225
-    },
-    "stats": {
-      "allTime": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100
-      },
-      "30d": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "mail.agenturserver.de",
-      "type": "host",
-      "port": "587",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1753634391,
-      "lastResultDuration": 115
-    },
-    "stats": {
-      "allTime": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100
-      },
-      "30d": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 900,
-        "successful": 900,
-        "uptime": 100,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
       "address": "185.237.66.112",
       "type": "host",
       "port": "80",
@@ -200,24 +200,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1753634391,
-      "lastResultDuration": 112
+      "lastCheck": 1753635092,
+      "lastResultDuration": 111
     },
     "stats": {
       "allTime": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100
       },
       "30d": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100,
         "lastReset": 1753255731
       },
       "365d": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100,
         "lastReset": 1753255731
       }
@@ -232,24 +232,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1753634391,
-      "lastResultDuration": 112
+      "lastCheck": 1753635092,
+      "lastResultDuration": 111
     },
     "stats": {
       "allTime": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100
       },
       "30d": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100,
         "lastReset": 1753255731
       },
       "365d": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100,
         "lastReset": 1753255731
       }
@@ -264,24 +264,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1753634392,
-      "lastResultDuration": 123
+      "lastCheck": 1753635093,
+      "lastResultDuration": 122
     },
     "stats": {
       "allTime": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100
       },
       "30d": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100,
         "lastReset": 1753255731
       },
       "365d": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100,
         "lastReset": 1753255731
       }
@@ -296,24 +296,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1753634393,
-      "lastResultDuration": 1364
+      "lastCheck": 1753635093,
+      "lastResultDuration": 898
     },
     "stats": {
       "allTime": {
-        "total": 900,
-        "successful": 899,
+        "total": 901,
+        "successful": 900,
         "uptime": 99.89
       },
       "30d": {
-        "total": 900,
-        "successful": 899,
+        "total": 901,
+        "successful": 900,
         "uptime": 99.89,
         "lastReset": 1753255731
       },
       "365d": {
-        "total": 900,
-        "successful": 899,
+        "total": 901,
+        "successful": 900,
         "uptime": 99.89,
         "lastReset": 1753255731
       }
@@ -328,24 +328,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1753634393,
-      "lastResultDuration": 209
+      "lastCheck": 1753635094,
+      "lastResultDuration": 229
     },
     "stats": {
       "allTime": {
-        "total": 900,
-        "successful": 899,
+        "total": 901,
+        "successful": 900,
         "uptime": 99.89
       },
       "30d": {
-        "total": 900,
-        "successful": 899,
+        "total": 901,
+        "successful": 900,
         "uptime": 99.89,
         "lastReset": 1753255731
       },
       "365d": {
-        "total": 900,
-        "successful": 899,
+        "total": 901,
+        "successful": 900,
         "uptime": 99.89,
         "lastReset": 1753255731
       }
@@ -360,24 +360,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1753634393,
-      "lastResultDuration": 228
+      "lastCheck": 1753635094,
+      "lastResultDuration": 235
     },
     "stats": {
       "allTime": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100
       },
       "30d": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100,
         "lastReset": 1753255731
       },
       "365d": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100,
         "lastReset": 1753255731
       }
@@ -392,24 +392,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1753634394,
-      "lastResultDuration": 704
+      "lastCheck": 1753635094,
+      "lastResultDuration": 203
     },
     "stats": {
       "allTime": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100
       },
       "30d": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100,
         "lastReset": 1753255731
       },
       "365d": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100,
         "lastReset": 1753255731
       }
@@ -424,24 +424,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1753634395,
-      "lastResultDuration": 594
+      "lastCheck": 1753635094,
+      "lastResultDuration": 136
     },
     "stats": {
       "allTime": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100
       },
       "30d": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100,
         "lastReset": 1753255731
       },
       "365d": {
-        "total": 900,
-        "successful": 900,
+        "total": 901,
+        "successful": 901,
         "uptime": 100,
         "lastReset": 1753255731
       }
