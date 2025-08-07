@@ -8,7 +8,327 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1754561144,
+      "lastCheck": 1754562244,
+      "lastResultDuration": 338
+    },
+    "stats": {
+      "allTime": {
+        "total": 1761,
+        "successful": 1760,
+        "uptime": 99.94
+      },
+      "30d": {
+        "total": 1761,
+        "successful": 1760,
+        "uptime": 99.94,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 1761,
+        "successful": 1760,
+        "uptime": 99.94,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "mail.agenturserver.de",
+      "type": "host",
+      "port": "993",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1754562245,
+      "lastResultDuration": 1311
+    },
+    "stats": {
+      "allTime": {
+        "total": 1760,
+        "successful": 1758,
+        "uptime": 99.89
+      },
+      "30d": {
+        "total": 1760,
+        "successful": 1758,
+        "uptime": 99.89,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 1760,
+        "successful": 1758,
+        "uptime": 99.89,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "mail.agenturserver.de",
+      "type": "host",
+      "port": "110",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1754562246,
+      "lastResultDuration": 347
+    },
+    "stats": {
+      "allTime": {
+        "total": 1760,
+        "successful": 1759,
+        "uptime": 99.94
+      },
+      "30d": {
+        "total": 1760,
+        "successful": 1759,
+        "uptime": 99.94,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 1760,
+        "successful": 1759,
+        "uptime": 99.94,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "mail.agenturserver.de",
+      "type": "host",
+      "port": "995",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1754562246,
+      "lastResultDuration": 349
+    },
+    "stats": {
+      "allTime": {
+        "total": 1760,
+        "successful": 1759,
+        "uptime": 99.94
+      },
+      "30d": {
+        "total": 1760,
+        "successful": 1759,
+        "uptime": 99.94,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 1760,
+        "successful": 1759,
+        "uptime": 99.94,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "mail.agenturserver.de",
+      "type": "host",
+      "port": "465",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1754562246,
+      "lastResultDuration": 491
+    },
+    "stats": {
+      "allTime": {
+        "total": 1760,
+        "successful": 1756,
+        "uptime": 99.77
+      },
+      "30d": {
+        "total": 1760,
+        "successful": 1756,
+        "uptime": 99.77,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 1760,
+        "successful": 1756,
+        "uptime": 99.77,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "mail.agenturserver.de",
+      "type": "host",
+      "port": "587",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1754562247,
+      "lastResultDuration": 495
+    },
+    "stats": {
+      "allTime": {
+        "total": 1760,
+        "successful": 1759,
+        "uptime": 99.94
+      },
+      "30d": {
+        "total": 1760,
+        "successful": 1759,
+        "uptime": 99.94,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 1760,
+        "successful": 1759,
+        "uptime": 99.94,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "185.237.66.112",
+      "type": "host",
+      "port": "80",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1754562247,
+      "lastResultDuration": 180
+    },
+    "stats": {
+      "allTime": {
+        "total": 1760,
+        "successful": 1760,
+        "uptime": 100
+      },
+      "30d": {
+        "total": 1760,
+        "successful": 1760,
+        "uptime": 100,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 1760,
+        "successful": 1760,
+        "uptime": 100,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "157.97.45.248",
+      "type": "host",
+      "port": "80",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1754562247,
+      "lastResultDuration": 165
+    },
+    "stats": {
+      "allTime": {
+        "total": 1760,
+        "successful": 1760,
+        "uptime": 100
+      },
+      "30d": {
+        "total": 1760,
+        "successful": 1760,
+        "uptime": 100,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 1760,
+        "successful": 1760,
+        "uptime": 100,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "85.13.152.121",
+      "type": "host",
+      "port": "80",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1754562247,
+      "lastResultDuration": 173
+    },
+    "stats": {
+      "allTime": {
+        "total": 1760,
+        "successful": 1759,
+        "uptime": 99.94
+      },
+      "30d": {
+        "total": 1760,
+        "successful": 1759,
+        "uptime": 99.94,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 1760,
+        "successful": 1759,
+        "uptime": 99.94,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "https://login.pixelsaft.de",
+      "type": "url",
+      "port": null,
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1754562249,
+      "lastResultDuration": 1425
+    },
+    "stats": {
+      "allTime": {
+        "total": 1760,
+        "successful": 1756,
+        "uptime": 99.77
+      },
+      "30d": {
+        "total": 1760,
+        "successful": 1756,
+        "uptime": 99.77,
+        "lastReset": 1753255731
+      },
+      "365d": {
+        "total": 1760,
+        "successful": 1756,
+        "uptime": 99.77,
+        "lastReset": 1753255731
+      }
+    }
+  },
+  {
+    "config": {
+      "address": "ns1.pixelsaft.de",
+      "type": "host",
+      "port": "53",
+      "timeout": 5
+    },
+    "status": {
+      "isUp": true,
+      "lastCheck": 1754562249,
       "lastResultDuration": 231
     },
     "stats": {
@@ -33,326 +353,6 @@
   },
   {
     "config": {
-      "address": "mail.agenturserver.de",
-      "type": "host",
-      "port": "993",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1754561144,
-      "lastResultDuration": 227
-    },
-    "stats": {
-      "allTime": {
-        "total": 1759,
-        "successful": 1757,
-        "uptime": 99.89
-      },
-      "30d": {
-        "total": 1759,
-        "successful": 1757,
-        "uptime": 99.89,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 1759,
-        "successful": 1757,
-        "uptime": 99.89,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "mail.agenturserver.de",
-      "type": "host",
-      "port": "110",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1754561145,
-      "lastResultDuration": 223
-    },
-    "stats": {
-      "allTime": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94
-      },
-      "30d": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "mail.agenturserver.de",
-      "type": "host",
-      "port": "995",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1754561145,
-      "lastResultDuration": 115
-    },
-    "stats": {
-      "allTime": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94
-      },
-      "30d": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "mail.agenturserver.de",
-      "type": "host",
-      "port": "465",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1754561145,
-      "lastResultDuration": 221
-    },
-    "stats": {
-      "allTime": {
-        "total": 1759,
-        "successful": 1755,
-        "uptime": 99.77
-      },
-      "30d": {
-        "total": 1759,
-        "successful": 1755,
-        "uptime": 99.77,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 1759,
-        "successful": 1755,
-        "uptime": 99.77,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "mail.agenturserver.de",
-      "type": "host",
-      "port": "587",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1754561145,
-      "lastResultDuration": 220
-    },
-    "stats": {
-      "allTime": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94
-      },
-      "30d": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "185.237.66.112",
-      "type": "host",
-      "port": "80",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1754561145,
-      "lastResultDuration": 112
-    },
-    "stats": {
-      "allTime": {
-        "total": 1759,
-        "successful": 1759,
-        "uptime": 100
-      },
-      "30d": {
-        "total": 1759,
-        "successful": 1759,
-        "uptime": 100,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 1759,
-        "successful": 1759,
-        "uptime": 100,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "157.97.45.248",
-      "type": "host",
-      "port": "80",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1754561145,
-      "lastResultDuration": 112
-    },
-    "stats": {
-      "allTime": {
-        "total": 1759,
-        "successful": 1759,
-        "uptime": 100
-      },
-      "30d": {
-        "total": 1759,
-        "successful": 1759,
-        "uptime": 100,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 1759,
-        "successful": 1759,
-        "uptime": 100,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "85.13.152.121",
-      "type": "host",
-      "port": "80",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1754561146,
-      "lastResultDuration": 122
-    },
-    "stats": {
-      "allTime": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94
-      },
-      "30d": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "https://login.pixelsaft.de",
-      "type": "url",
-      "port": null,
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1754561147,
-      "lastResultDuration": 1499
-    },
-    "stats": {
-      "allTime": {
-        "total": 1759,
-        "successful": 1755,
-        "uptime": 99.77
-      },
-      "30d": {
-        "total": 1759,
-        "successful": 1755,
-        "uptime": 99.77,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 1759,
-        "successful": 1755,
-        "uptime": 99.77,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
-      "address": "ns1.pixelsaft.de",
-      "type": "host",
-      "port": "53",
-      "timeout": 5
-    },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1754561147,
-      "lastResultDuration": 210
-    },
-    "stats": {
-      "allTime": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94
-      },
-      "30d": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94,
-        "lastReset": 1753255731
-      },
-      "365d": {
-        "total": 1759,
-        "successful": 1758,
-        "uptime": 99.94,
-        "lastReset": 1753255731
-      }
-    }
-  },
-  {
-    "config": {
       "address": "ns2.pixelsaft.de",
       "type": "host",
       "port": "53",
@@ -360,24 +360,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1754561148,
-      "lastResultDuration": 703
+      "lastCheck": 1754562249,
+      "lastResultDuration": 324
     },
     "stats": {
       "allTime": {
-        "total": 1759,
-        "successful": 1757,
+        "total": 1760,
+        "successful": 1758,
         "uptime": 99.89
       },
       "30d": {
-        "total": 1759,
-        "successful": 1757,
+        "total": 1760,
+        "successful": 1758,
         "uptime": 99.89,
         "lastReset": 1753255731
       },
       "365d": {
-        "total": 1759,
-        "successful": 1757,
+        "total": 1760,
+        "successful": 1758,
         "uptime": 99.89,
         "lastReset": 1753255731
       }
@@ -392,24 +392,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1754561148,
-      "lastResultDuration": 108
+      "lastCheck": 1754562250,
+      "lastResultDuration": 162
     },
     "stats": {
       "allTime": {
-        "total": 1759,
-        "successful": 1759,
+        "total": 1760,
+        "successful": 1760,
         "uptime": 100
       },
       "30d": {
-        "total": 1759,
-        "successful": 1759,
+        "total": 1760,
+        "successful": 1760,
         "uptime": 100,
         "lastReset": 1753255731
       },
       "365d": {
-        "total": 1759,
-        "successful": 1759,
+        "total": 1760,
+        "successful": 1760,
         "uptime": 100,
         "lastReset": 1753255731
       }
@@ -424,24 +424,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1754561149,
-      "lastResultDuration": 474
+      "lastCheck": 1754562250,
+      "lastResultDuration": 137
     },
     "stats": {
       "allTime": {
-        "total": 1759,
-        "successful": 1759,
+        "total": 1760,
+        "successful": 1760,
         "uptime": 100
       },
       "30d": {
-        "total": 1759,
-        "successful": 1759,
+        "total": 1760,
+        "successful": 1760,
         "uptime": 100,
         "lastReset": 1753255731
       },
       "365d": {
-        "total": 1759,
-        "successful": 1759,
+        "total": 1760,
+        "successful": 1760,
         "uptime": 100,
         "lastReset": 1753255731
       }
