@@ -7,25 +7,25 @@
       "timeout": 5
     },
     "status": {
-      "isUp": false,
-      "lastCheck": 1769364436,
-      "lastResultDuration": 5000
+      "isUp": true,
+      "lastCheck": 1769365502,
+      "lastResultDuration": 443
     },
     "stats": {
       "allTime": {
-        "total": 16248,
-        "successful": 16220,
+        "total": 16249,
+        "successful": 16221,
         "uptime": 99.83
       },
       "30d": {
-        "total": 491,
-        "successful": 489,
+        "total": 492,
+        "successful": 490,
         "uptime": 99.59,
         "lastReset": 1768811129
       },
       "365d": {
-        "total": 16248,
-        "successful": 16220,
+        "total": 16249,
+        "successful": 16221,
         "uptime": 99.83,
         "lastReset": 1753255731
       }
@@ -39,25 +39,25 @@
       "timeout": 5
     },
     "status": {
-      "isUp": false,
-      "lastCheck": 1769364441,
-      "lastResultDuration": 5000
+      "isUp": true,
+      "lastCheck": 1769365503,
+      "lastResultDuration": 442
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16228,
+        "total": 16248,
+        "successful": 16229,
         "uptime": 99.88
       },
       "30d": {
-        "total": 491,
-        "successful": 489,
+        "total": 492,
+        "successful": 490,
         "uptime": 99.59,
         "lastReset": 1768811129
       },
       "365d": {
-        "total": 16247,
-        "successful": 16228,
+        "total": 16248,
+        "successful": 16229,
         "uptime": 99.88,
         "lastReset": 1753255731
       }
@@ -71,25 +71,25 @@
       "timeout": 5
     },
     "status": {
-      "isUp": false,
-      "lastCheck": 1769364447,
-      "lastResultDuration": 5000
+      "isUp": true,
+      "lastCheck": 1769365503,
+      "lastResultDuration": 144
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16230,
+        "total": 16248,
+        "successful": 16231,
         "uptime": 99.9
       },
       "30d": {
-        "total": 491,
-        "successful": 489,
+        "total": 492,
+        "successful": 490,
         "uptime": 99.59,
         "lastReset": 1768811130
       },
       "365d": {
-        "total": 16247,
-        "successful": 16230,
+        "total": 16248,
+        "successful": 16231,
         "uptime": 99.9,
         "lastReset": 1753255731
       }
@@ -103,25 +103,25 @@
       "timeout": 5
     },
     "status": {
-      "isUp": false,
-      "lastCheck": 1769364452,
-      "lastResultDuration": 5000
+      "isUp": true,
+      "lastCheck": 1769365503,
+      "lastResultDuration": 490
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16229,
+        "total": 16248,
+        "successful": 16230,
         "uptime": 99.89
       },
       "30d": {
-        "total": 491,
-        "successful": 489,
+        "total": 492,
+        "successful": 490,
         "uptime": 99.59,
         "lastReset": 1768811130
       },
       "365d": {
-        "total": 16247,
-        "successful": 16229,
+        "total": 16248,
+        "successful": 16230,
         "uptime": 99.89,
         "lastReset": 1753255731
       }
@@ -135,25 +135,25 @@
       "timeout": 5
     },
     "status": {
-      "isUp": false,
-      "lastCheck": 1769364457,
-      "lastResultDuration": 5000
+      "isUp": true,
+      "lastCheck": 1769365504,
+      "lastResultDuration": 440
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16228,
+        "total": 16248,
+        "successful": 16229,
         "uptime": 99.88
       },
       "30d": {
-        "total": 491,
-        "successful": 489,
+        "total": 492,
+        "successful": 490,
         "uptime": 99.59,
         "lastReset": 1768811130
       },
       "365d": {
-        "total": 16247,
-        "successful": 16228,
+        "total": 16248,
+        "successful": 16229,
         "uptime": 99.88,
         "lastReset": 1753255731
       }
@@ -167,25 +167,25 @@
       "timeout": 5
     },
     "status": {
-      "isUp": false,
-      "lastCheck": 1769364462,
-      "lastResultDuration": 5000
+      "isUp": true,
+      "lastCheck": 1769365504,
+      "lastResultDuration": 443
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16231,
+        "total": 16248,
+        "successful": 16232,
         "uptime": 99.9
       },
       "30d": {
-        "total": 491,
-        "successful": 489,
+        "total": 492,
+        "successful": 490,
         "uptime": 99.59,
         "lastReset": 1768811130
       },
       "365d": {
-        "total": 16247,
-        "successful": 16231,
+        "total": 16248,
+        "successful": 16232,
         "uptime": 99.9,
         "lastReset": 1753255731
       }
@@ -199,25 +199,25 @@
       "timeout": 5
     },
     "status": {
-      "isUp": false,
-      "lastCheck": 1769364467,
-      "lastResultDuration": 5000
+      "isUp": true,
+      "lastCheck": 1769365504,
+      "lastResultDuration": 142
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16234,
+        "total": 16248,
+        "successful": 16235,
         "uptime": 99.92
       },
       "30d": {
-        "total": 491,
-        "successful": 489,
+        "total": 492,
+        "successful": 490,
         "uptime": 99.59,
         "lastReset": 1768811130
       },
       "365d": {
-        "total": 16247,
-        "successful": 16234,
+        "total": 16248,
+        "successful": 16235,
         "uptime": 99.92,
         "lastReset": 1753255731
       }
@@ -231,25 +231,25 @@
       "timeout": 5
     },
     "status": {
-      "isUp": false,
-      "lastCheck": 1769364472,
-      "lastResultDuration": 5000
+      "isUp": true,
+      "lastCheck": 1769365504,
+      "lastResultDuration": 143
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16232,
+        "total": 16248,
+        "successful": 16233,
         "uptime": 99.91
       },
       "30d": {
-        "total": 491,
-        "successful": 489,
+        "total": 492,
+        "successful": 490,
         "uptime": 99.59,
         "lastReset": 1768811131
       },
       "365d": {
-        "total": 16247,
-        "successful": 16232,
+        "total": 16248,
+        "successful": 16233,
         "uptime": 99.91,
         "lastReset": 1753255731
       }
@@ -264,24 +264,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1769364472,
-      "lastResultDuration": 127
+      "lastCheck": 1769365505,
+      "lastResultDuration": 157
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16207,
+        "total": 16248,
+        "successful": 16208,
         "uptime": 99.75
       },
       "30d": {
-        "total": 491,
-        "successful": 486,
+        "total": 492,
+        "successful": 487,
         "uptime": 98.98,
         "lastReset": 1768811131
       },
       "365d": {
-        "total": 16247,
-        "successful": 16207,
+        "total": 16248,
+        "successful": 16208,
         "uptime": 99.75,
         "lastReset": 1753255731
       }
@@ -295,25 +295,25 @@
       "timeout": 5
     },
     "status": {
-      "isUp": false,
-      "lastCheck": 1769364477,
-      "lastResultDuration": 5000
+      "isUp": true,
+      "lastCheck": 1769365506,
+      "lastResultDuration": 1329
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16207,
+        "total": 16248,
+        "successful": 16208,
         "uptime": 99.75
       },
       "30d": {
-        "total": 491,
-        "successful": 489,
+        "total": 492,
+        "successful": 490,
         "uptime": 99.59,
         "lastReset": 1768811131
       },
       "365d": {
-        "total": 16247,
-        "successful": 16207,
+        "total": 16248,
+        "successful": 16208,
         "uptime": 99.75,
         "lastReset": 1753255731
       }
@@ -328,24 +328,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1769364478,
-      "lastResultDuration": 150
+      "lastCheck": 1769365506,
+      "lastResultDuration": 302
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16237,
+        "total": 16248,
+        "successful": 16238,
         "uptime": 99.94
       },
       "30d": {
-        "total": 491,
-        "successful": 490,
+        "total": 492,
+        "successful": 491,
         "uptime": 99.8,
         "lastReset": 1768811132
       },
       "365d": {
-        "total": 16247,
-        "successful": 16237,
+        "total": 16248,
+        "successful": 16238,
         "uptime": 99.94,
         "lastReset": 1753255731
       }
@@ -360,24 +360,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1769364478,
-      "lastResultDuration": 221
+      "lastCheck": 1769365506,
+      "lastResultDuration": 204
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16240,
+        "total": 16248,
+        "successful": 16241,
         "uptime": 99.96
       },
       "30d": {
-        "total": 491,
-        "successful": 491,
+        "total": 492,
+        "successful": 492,
         "uptime": 100,
         "lastReset": 1768811133
       },
       "365d": {
-        "total": 16247,
-        "successful": 16240,
+        "total": 16248,
+        "successful": 16241,
         "uptime": 99.96,
         "lastReset": 1753255731
       }
@@ -392,24 +392,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1769364478,
-      "lastResultDuration": 230
+      "lastCheck": 1769365507,
+      "lastResultDuration": 272
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16234,
+        "total": 16248,
+        "successful": 16235,
         "uptime": 99.92
       },
       "30d": {
-        "total": 491,
-        "successful": 491,
+        "total": 492,
+        "successful": 492,
         "uptime": 100,
         "lastReset": 1768811133
       },
       "365d": {
-        "total": 16247,
-        "successful": 16234,
+        "total": 16248,
+        "successful": 16235,
         "uptime": 99.92,
         "lastReset": 1753255731
       }
@@ -424,24 +424,24 @@
     },
     "status": {
       "isUp": true,
-      "lastCheck": 1769364478,
-      "lastResultDuration": 16
+      "lastCheck": 1769365507,
+      "lastResultDuration": 197
     },
     "stats": {
       "allTime": {
-        "total": 16247,
-        "successful": 16239,
+        "total": 16248,
+        "successful": 16240,
         "uptime": 99.95
       },
       "30d": {
-        "total": 491,
-        "successful": 491,
+        "total": 492,
+        "successful": 492,
         "uptime": 100,
         "lastReset": 1768811133
       },
       "365d": {
-        "total": 16247,
-        "successful": 16239,
+        "total": 16248,
+        "successful": 16240,
         "uptime": 99.95,
         "lastReset": 1753255731
       }
