@@ -16,7 +16,7 @@ That’s it!
 ## Quick Start
 
 1. **Fork this repository**
-2. **Configure services** in `docs/db.json` (see below)
+2. **Configure services** in `docs/status.json` (see below)
 3. **Commit changes** to your fork
 4. **Enable GitHub Pages** in Settings → Pages → Source: GitHub Actions
 5. **Your monitor** will be at `https://username.github.io/repo-name/`
@@ -27,7 +27,7 @@ See it in action: **<https://status.pixelsaft.wtf>**
 
 ## Service Configuration
 
-Edit `docs/db.json` to add your services:
+Edit `docs/status.json` to add your services:
 
 ### URL Monitoring
 
@@ -44,8 +44,7 @@ Edit `docs/db.json` to add your services:
     "allTime": { "total": 0, "successful": 0, "uptime": 100, "expected": 0, "coverage": 100, "since": 0 },
     "30d": { "total": 0, "successful": 0, "uptime": 100, "expected": 0, "coverage": 100, "since": 0 },
     "365d": { "total": 0, "successful": 0, "uptime": 100, "expected": 0, "coverage": 100, "since": 0 }
-  },
-  "history": []
+  }
 }
 ```
 
@@ -65,8 +64,7 @@ Edit `docs/db.json` to add your services:
     "allTime": { "total": 0, "successful": 0, "uptime": 100, "expected": 0, "coverage": 100, "since": 0 },
     "30d": { "total": 0, "successful": 0, "uptime": 100, "expected": 0, "coverage": 100, "since": 0 },
     "365d": { "total": 0, "successful": 0, "uptime": 100, "expected": 0, "coverage": 100, "since": 0 }
-  },
-  "history": []
+  }
 }
 ```
 
@@ -84,7 +82,8 @@ Open the local site at <http://localhost:3000>.
 
 - **Frontend**: Static HTML/CSS/JS served from `docs/`
 - **Backend**: Node.js monitoring script using built-in modules only
-- **Database**: Single JSON file `docs/db.json`
+- **Status data**: Lightweight public JSON file `docs/status.json`
+- **History data**: Full check history in `history.json` (not deployed to GitHub Pages)
 - **Deployment**: GitHub Actions + Pages (zero config)
 
 ## File Structure
@@ -95,7 +94,8 @@ Open the local site at <http://localhost:3000>.
 │   ├── index.html                      # Main page
 │   ├── style.css                       # Minimal CSS
 │   ├── app.js                          # Frontend logic
-│   └── db.json                         # Service data
+│   └── status.json                     # Public service status and stats
+├── history.json                        # Full historical check data
 ├── check-and-update-db.js              # Monitoring script
 ├── server.js                           # Development server
 └── package.json                        # Dependencies & scripts
@@ -116,11 +116,11 @@ Following the **pixelsaft.wtf** approach:
 
 1. **GitHub Actions** runs every 15 minutes
 2. **Node.js script** checks each service (HTTP/TCP)
-3. **Updates JSON database** with results, daily history buckets, rolling uptime stats, and monitor coverage
+3. **Updates `docs/status.json` with public status/stats and `history.json` with full historical check data**
 4. **Commits changes** back to repository
 5. **GitHub Pages** serves the updated site
 
-Uptime percentages are calculated from recorded service checks. Monitor coverage is shown for all-time, 30d, and 365d windows and shows how many scheduled checks were actually recorded, so skipped or failed GitHub Actions runs are visible instead of silently making the sample size look complete.
+Uptime percentages are calculated from recorded service checks. The public page fetches the lightweight `docs/status.json`; full historical check data is kept separately in `history.json`. Monitor coverage is shown for all-time, 30d, and 365d windows and shows how many scheduled checks were actually recorded, so skipped or failed GitHub Actions runs are visible instead of silently making the sample size look complete.
 
 Missed GitHub Actions runs are not counted as service UP or DOWN. They reduce monitor coverage.
 
