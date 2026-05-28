@@ -33,10 +33,19 @@ function createServiceElement(service = null) {
     element.querySelector('.last-check').textContent = formatDate(service.status.lastCheck * 1000)
     element.querySelector('.stats-all-time').replaceChildren(...formatPeriodStats(service.stats.allTime))
     element.querySelector('.stats-30d').replaceChildren(...formatPeriodStats(service.stats['30d']))
+    element.querySelector('.stats-365d-label').textContent = getLongPeriodLabel(service)
     element.querySelector('.stats-365d').replaceChildren(...formatPeriodStats(service.stats['365d']))
   }
 
   return element
+}
+
+function getLongPeriodLabel(service) {
+  const firstCheck = service.stats.allTime?.since
+  const lastCheck = service.status?.lastCheck
+  const days = firstCheck && lastCheck ? Math.floor((lastCheck - firstCheck) / 86400) : 365
+
+  return days < 365 ? `Since Start (${days} days)` : 'Last 365 Days'
 }
 
 function formatPeriodStats(stats) {

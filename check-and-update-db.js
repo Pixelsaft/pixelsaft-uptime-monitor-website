@@ -172,14 +172,10 @@ function calculateWindowStats(history, currentTime, windowSeconds) {
     }
   }
 
-  const expected = expectedChecksBetween(windowStart, currentTime);
-
   return {
     total,
     successful,
     uptime: calculateUptime(successful, total),
-    expected,
-    coverage: calculateCoverage(total, expected),
     since: windowStart
   };
 }
@@ -239,7 +235,11 @@ function updateStats(service, historyService, currentTime) {
   sortHistory(historyService, currentTime);
   service.stats.allTime = calculateAllTimeStats(historyService.allTime, currentTime);
   service.stats['30d'] = calculateWindowStats(historyService.history, currentTime, THIRTY_DAYS_SECONDS);
-  service.stats['365d'] = calculateWindowStats(historyService.history, currentTime, THREE_SIXTY_FIVE_DAYS_SECONDS);
+  service.stats['365d'] = calculateWindowStats(
+    historyService.history,
+    currentTime,
+    Math.min(THREE_SIXTY_FIVE_DAYS_SECONDS, currentTime - service.stats.allTime.since)
+  );
 }
 
 function createDefaultStats() {
