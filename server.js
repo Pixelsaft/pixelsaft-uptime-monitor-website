@@ -24,7 +24,9 @@ function getContentType(filePath) {
 }
 
 const server = http.createServer((req, res) => {
-  let filePath = path.join(PUBLIC_DIR, req.url === '/' ? 'index.html' : req.url);
+  const requestUrl = new URL(req.url, `http://${req.headers.host}`);
+  const pathname = decodeURIComponent(requestUrl.pathname);
+  let filePath = path.join(PUBLIC_DIR, pathname === '/' ? 'index.html' : pathname);
 
   // Security: prevent directory traversal
   if (!filePath.startsWith(PUBLIC_DIR)) {
