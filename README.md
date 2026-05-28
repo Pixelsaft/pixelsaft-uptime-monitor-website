@@ -8,7 +8,7 @@ That’s it!
 
 - **Automated monitoring** - Runs every 15 minutes via GitHub Actions
 - **Multiple protocols** - HTTP/HTTPS URLs and TCP port monitoring
-- **Uptime tracking** - 30-day and 365-day uptime percentages
+- **Uptime tracking** - All-time plus rolling 30-day and 365-day uptime percentages with monitor coverage
 - **Mobile responsive** - Clean, minimal design inspired by [pixelsaft.wtf](https://pixelsaft.wtf/)
 - **Zero maintenance** - Fully automated with GitHub Actions + Pages
 - **Semantic HTML** - Accessible and SEO-friendly structure
@@ -41,10 +41,11 @@ Edit `docs/db.json` to add your services:
   },
   "status": { "isUp": true, "lastCheck": 0, "lastResultDuration": 0 },
   "stats": {
-    "allTime": { "total": 0, "successful": 0 },
-    "30d": { "total": 0, "successful": 0, "uptime": 100, "lastReset": 0 },
-    "365d": { "total": 0, "successful": 0, "uptime": 100, "lastReset": 0 }
-  }
+    "allTime": { "total": 0, "successful": 0, "uptime": 100, "expected": 0, "coverage": 100, "since": 0 },
+    "30d": { "total": 0, "successful": 0, "uptime": 100, "expected": 0, "coverage": 100, "since": 0 },
+    "365d": { "total": 0, "successful": 0, "uptime": 100, "expected": 0, "coverage": 100, "since": 0 }
+  },
+  "history": []
 }
 ```
 
@@ -61,10 +62,11 @@ Edit `docs/db.json` to add your services:
   },
   "status": { "isUp": true, "lastCheck": 0, "lastResultDuration": 0 },
   "stats": {
-    "allTime": { "total": 0, "successful": 0 },
-    "30d": { "total": 0, "successful": 0, "uptime": 100, "lastReset": 0 },
-    "365d": { "total": 0, "successful": 0, "uptime": 100, "lastReset": 0 }
-  }
+    "allTime": { "total": 0, "successful": 0, "uptime": 100, "expected": 0, "coverage": 100, "since": 0 },
+    "30d": { "total": 0, "successful": 0, "uptime": 100, "expected": 0, "coverage": 100, "since": 0 },
+    "365d": { "total": 0, "successful": 0, "uptime": 100, "expected": 0, "coverage": 100, "since": 0 }
+  },
+  "history": []
 }
 ```
 
@@ -76,6 +78,8 @@ npm run dev              # Start development server with auto-reload
 npm run checkAndUpdateDb # Run uptime check manually
 ```
 
+Open the local site at <http://localhost:3000>.
+
 ## Architecture
 
 - **Frontend**: Static HTML/CSS/JS served from `docs/`
@@ -86,7 +90,7 @@ npm run checkAndUpdateDb # Run uptime check manually
 ## File Structure
 
 ```
-├── .github/workflows/uptime-check.yml  # GitHub Actions workflow
+├── .github/workflows/check-uptime-and-update-db.yml  # GitHub Actions workflow
 ├── docs/                               # Static site files
 │   ├── index.html                      # Main page
 │   ├── style.css                       # Minimal CSS
@@ -112,9 +116,13 @@ Following the **pixelsaft.wtf** approach:
 
 1. **GitHub Actions** runs every 15 minutes
 2. **Node.js script** checks each service (HTTP/TCP)
-3. **Updates JSON database** with results and uptime stats
+3. **Updates JSON database** with results, daily history buckets, rolling uptime stats, and monitor coverage
 4. **Commits changes** back to repository
 5. **GitHub Pages** serves the updated site
+
+Uptime percentages are calculated from recorded service checks. Monitor coverage is shown for all-time, 30d, and 365d windows and shows how many scheduled checks were actually recorded, so skipped or failed GitHub Actions runs are visible instead of silently making the sample size look complete.
+
+Missed GitHub Actions runs are not counted as service UP or DOWN. They reduce monitor coverage.
 
 ## License
 
