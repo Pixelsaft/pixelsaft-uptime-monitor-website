@@ -12,12 +12,8 @@ concurrency:
 jobs:
   check-uptime-and-update-db:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     permissions:
       contents: write
-      pages: write
-      id-token: write
 
     steps:
       - name: Checkout
@@ -53,14 +49,3 @@ jobs:
           echo "Failed to push uptime data after retries"
           exit 1
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v6
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: ./docs
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
