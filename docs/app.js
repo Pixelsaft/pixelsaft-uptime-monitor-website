@@ -32,9 +32,24 @@ function createServiceElement(service = null) {
     element.querySelector('.response-time').textContent = `${service.status.lastResultDuration}ms`
     element.querySelector('.last-check').textContent = formatDate(service.status.lastCheck * 1000)
     element.querySelector('.all-time-uptime').textContent = `${service.stats.allTime.uptime.toFixed(2)}%`
+    element.querySelector('.monitor-coverage-all-time').replaceChildren(...formatCoverage(service.stats.allTime))
+    element.querySelector('.monitor-coverage-30d').replaceChildren(...formatCoverage(service.stats['30d']))
+    element.querySelector('.monitor-coverage-365d').replaceChildren(...formatCoverage(service.stats['365d']))
   }
 
   return element
+}
+
+function formatCoverage(stats) {
+  if (!stats || typeof stats.expected !== 'number' || typeof stats.coverage !== 'number') {
+    return [document.createTextNode('Unknown')]
+  }
+
+  return [
+    document.createTextNode(`${stats.coverage.toFixed(2)}%`),
+    document.createElement('br'),
+    document.createTextNode(`(${stats.total}/${stats.expected} checks)`)
+  ]
 }
 
 function formatDate(timestamp) {
