@@ -140,6 +140,10 @@ function getServiceKey(service) {
   return `${config.type}|${config.address}|${config.port || ''}`;
 }
 
+function getSlotTimestamp(timestamp) {
+  return Math.floor(timestamp / CHECK_INTERVAL_SECONDS) * CHECK_INTERVAL_SECONDS;
+}
+
 function getDateKey(timestamp) {
   return new Date(timestamp * 1000).toISOString().slice(0, 10);
 }
@@ -220,6 +224,7 @@ function calculateAllTimeStats(allTime, currentTime) {
 }
 
 function addHistoryEntry(historyService, timestamp, isUp) {
+  timestamp = getSlotTimestamp(timestamp);
   const date = getDateKey(timestamp);
   let bucket = historyService.history.find(entry => entry.date === date);
 
@@ -257,6 +262,7 @@ function sortHistory(historyService, currentTime) {
 }
 
 function updateStats(service, historyService, currentTime) {
+  currentTime = getSlotTimestamp(currentTime);
   sortHistory(historyService, currentTime);
   service.stats.allTime = calculateAllTimeStats(historyService.allTime, currentTime);
   service.stats['30d'] = calculateWindowStats(historyService.history, currentTime, THIRTY_DAYS_SECONDS);
@@ -393,7 +399,7 @@ async function main() {
     console.log(`Checking ${config.address}${config.port ? ':' + config.port : ''}...`);
 
     const result = await checkService(config);
-    const currentTime = Math.floor(Date.now() / 1000);
+    const currentTime = getSlotTimestamp(Math.floor(Date.now() / 1000));
     const isUp = result.result === 'ConnectOK';
 
     service.status.lastResultDuration = result.duration;
