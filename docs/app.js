@@ -47,9 +47,7 @@ function formatPeriodStats(stats) {
   return [
     document.createTextNode(`${stats.uptime.toFixed(2)}% uptime`),
     document.createElement('br'),
-    document.createTextNode(`${stats.coverage.toFixed(2)}% coverage`),
-    document.createElement('br'),
-    document.createTextNode(`${stats.total}/${stats.expected} checks`)
+    document.createTextNode(`from ${stats.total} checks`)
   ]
 }
 

@@ -229,13 +229,14 @@ function addHistoryEntry(historyService, timestamp, isUp) {
   }
 }
 
-function sortHistory(historyService) {
+function sortHistory(historyService, currentTime) {
   historyService.history = (historyService.history || [])
+    .filter(bucket => bucket.lastCheck >= currentTime - THREE_SIXTY_FIVE_DAYS_SECONDS)
     .sort((a, b) => a.firstCheck - b.firstCheck);
 }
 
 function updateStats(service, historyService, currentTime) {
-  sortHistory(historyService);
+  sortHistory(historyService, currentTime);
   service.stats.allTime = calculateAllTimeStats(historyService.allTime, currentTime);
   service.stats['30d'] = calculateWindowStats(historyService.history, currentTime, THIRTY_DAYS_SECONDS);
   service.stats['365d'] = calculateWindowStats(historyService.history, currentTime, THREE_SIXTY_FIVE_DAYS_SECONDS);
