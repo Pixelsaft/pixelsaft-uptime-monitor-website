@@ -23,9 +23,9 @@ function createServiceElement(service = null) {
     element.querySelector('.status').className = `status ${service.status.isUp ? 'up' : 'down'}`
     element.querySelector('.service-name').textContent = service.config.address + (service.config.port ? ':' + service.config.port : '')
     element.querySelector('.service-type').textContent = getServiceType(service)
-    element.querySelector('.uptime-main').textContent = `${service.stats['365d'].uptime.toFixed(2)}% (365d)`
+    element.querySelector('.uptime-main').textContent = `${service.stats['365d'].uptime.toFixed(3)}% (365d)`
     element.querySelector('.uptime-main').setAttribute('value', service.stats['365d'].uptime)
-    element.querySelector('.uptime-detail').textContent = `${service.stats['30d'].uptime.toFixed(2)}% (30d)`
+    element.querySelector('.uptime-detail').textContent = `${service.stats['30d'].uptime.toFixed(3)}% (30d)`
     element.querySelector('.uptime-detail').setAttribute('value', service.stats['30d'].uptime)
 
     // Populate extended data
@@ -45,7 +45,7 @@ function formatPeriodStats(stats) {
   }
 
   return [
-    document.createTextNode(`${stats.uptime.toFixed(2)}% uptime`),
+    document.createTextNode(`${stats.uptime.toFixed(3)}% uptime`),
     document.createElement('br'),
     document.createTextNode(`from ${stats.total} checks`)
   ]
