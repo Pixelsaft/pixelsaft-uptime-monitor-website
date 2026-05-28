@@ -106,7 +106,7 @@ function calculateCoverage(recorded, expected) {
 function expectedChecksBetween(startTime, currentTime) {
   if (!startTime || startTime > currentTime) return 0;
 
-  return Math.floor((currentTime - startTime) / CHECK_INTERVAL_SECONDS) + 1;
+  return Math.max(1, Math.floor((currentTime - startTime) / CHECK_INTERVAL_SECONDS));
 }
 
 function getServiceKey(service) {
@@ -153,8 +153,6 @@ function calculateWindowStats(history, currentTime, windowSeconds) {
   const windowStart = currentTime - windowSeconds;
   let total = 0;
   let successful = 0;
-  let firstRecordedCheck = currentTime;
-
   for (const bucket of history) {
     if (bucket.lastCheck < windowStart) continue;
 
@@ -163,7 +161,6 @@ function calculateWindowStats(history, currentTime, windowSeconds) {
     if (!checks) {
       total += bucket.total;
       successful += bucket.successful;
-      firstRecordedCheck = Math.min(firstRecordedCheck, bucket.firstCheck);
       continue;
     }
 
@@ -172,11 +169,10 @@ function calculateWindowStats(history, currentTime, windowSeconds) {
 
       total++;
       if (success) successful++;
-      firstRecordedCheck = Math.min(firstRecordedCheck, timestamp);
     }
   }
 
-  const expected = expectedChecksBetween(Math.max(windowStart, firstRecordedCheck), currentTime);
+  const expected = expectedChecksBetween(windowStart, currentTime);
 
   return {
     total,
@@ -184,7 +180,7 @@ function calculateWindowStats(history, currentTime, windowSeconds) {
     uptime: calculateUptime(successful, total),
     expected,
     coverage: calculateCoverage(total, expected),
-    since: firstRecordedCheck
+    since: windowStart
   };
 }
 
