@@ -96,11 +96,11 @@ function checkUrl(url, timeout = 5000) {
 }
 
 function calculateUptime(successful, total) {
-  return total > 0 ? Math.round((successful / total) * 10000) / 100 : 100.0;
+  return total > 0 ? Math.round((successful / total) * 100000) / 1000 : 100.0;
 }
 
 function calculateCoverage(recorded, expected) {
-  return expected > 0 ? Math.round((recorded / expected) * 10000) / 100 : 100.0;
+  return expected > 0 ? Math.round((recorded / expected) * 100000) / 1000 : 100.0;
 }
 
 function expectedChecksBetween(startTime, currentTime) {
