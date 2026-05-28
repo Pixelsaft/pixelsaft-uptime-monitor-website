@@ -6,36 +6,10 @@
       "port": "143",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972747,
-      "lastResultDuration": 453
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 22015,
-        "uptime": 99.74,
-        "since": 1752704487,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 905,
-        "uptime": 100,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381457
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 22015,
-        "uptime": 99.74,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704487
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 22015,
+      "since": 1752704487
     },
     "history": [
       {
@@ -2583,36 +2557,10 @@
       "port": "993",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972747,
-      "lastResultDuration": 295
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 22031,
-        "uptime": 99.81,
-        "since": 1752704488,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 905,
-        "uptime": 100,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381457
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 22031,
-        "uptime": 99.81,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704488
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 22031,
+      "since": 1752704488
     },
     "history": [
       {
@@ -5160,36 +5108,10 @@
       "port": "110",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972747,
-      "lastResultDuration": 298
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 22031,
-        "uptime": 99.81,
-        "since": 1752704488,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 905,
-        "uptime": 100,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381457
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 22031,
-        "uptime": 99.81,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704488
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 22031,
+      "since": 1752704488
     },
     "history": [
       {
@@ -7737,36 +7659,10 @@
       "port": "995",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972748,
-      "lastResultDuration": 289
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 22030,
-        "uptime": 99.81,
-        "since": 1752704488,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 905,
-        "uptime": 100,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381457
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 22030,
-        "uptime": 99.81,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704488
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 22030,
+      "since": 1752704488
     },
     "history": [
       {
@@ -10314,36 +10210,10 @@
       "port": "465",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972748,
-      "lastResultDuration": 440
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 22032,
-        "uptime": 99.82,
-        "since": 1752704489,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 905,
-        "uptime": 100,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381458
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 22032,
-        "uptime": 99.82,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704489
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 22032,
+      "since": 1752704489
     },
     "history": [
       {
@@ -12891,36 +12761,10 @@
       "port": "587",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972749,
-      "lastResultDuration": 278
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 22034,
-        "uptime": 99.83,
-        "since": 1752704489,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 905,
-        "uptime": 100,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381458
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 22034,
-        "uptime": 99.83,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704489
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 22034,
+      "since": 1752704489
     },
     "history": [
       {
@@ -15468,36 +15312,10 @@
       "port": "80",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972749,
-      "lastResultDuration": 142
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 22039,
-        "uptime": 99.85,
-        "since": 1752704489,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 905,
-        "uptime": 100,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381458
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 22039,
-        "uptime": 99.85,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704489
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 22039,
+      "since": 1752704489
     },
     "history": [
       {
@@ -18045,36 +17863,10 @@
       "port": "80",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972749,
-      "lastResultDuration": 147
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 22036,
-        "uptime": 99.84,
-        "since": 1752704489,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 905,
-        "uptime": 100,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381458
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 22036,
-        "uptime": 99.84,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704489
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 22036,
+      "since": 1752704489
     },
     "history": [
       {
@@ -20622,36 +20414,10 @@
       "port": "80",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972749,
-      "lastResultDuration": 149
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 21949,
-        "uptime": 99.44,
-        "since": 1752704489,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 893,
-        "uptime": 98.67,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381458
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 21949,
-        "uptime": 99.44,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704489
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 21949,
+      "since": 1752704489
     },
     "history": [
       {
@@ -23199,36 +22965,10 @@
       "port": null,
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972750,
-      "lastResultDuration": 1141
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 21993,
-        "uptime": 99.64,
-        "since": 1752704491,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 902,
-        "uptime": 99.67,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381459
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 21993,
-        "uptime": 99.64,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704491
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 21993,
+      "since": 1752704491
     },
     "history": [
       {
@@ -25776,36 +25516,10 @@
       "port": "53",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972750,
-      "lastResultDuration": 154
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 22060,
-        "uptime": 99.95,
-        "since": 1752704491,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 905,
-        "uptime": 100,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381459
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 22060,
-        "uptime": 99.95,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704491
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 22060,
+      "since": 1752704491
     },
     "history": [
       {
@@ -28353,36 +28067,10 @@
       "port": "53",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972750,
-      "lastResultDuration": 189
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 22065,
-        "uptime": 99.97,
-        "since": 1752704491,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 905,
-        "uptime": 100,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381460
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 22065,
-        "uptime": 99.97,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704491
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 22065,
+      "since": 1752704491
     },
     "history": [
       {
@@ -30930,36 +30618,10 @@
       "port": "53",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972751,
-      "lastResultDuration": 159
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 22055,
-        "uptime": 99.92,
-        "since": 1752704491,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 905,
-        "uptime": 100,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381460
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 22055,
-        "uptime": 99.92,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704491
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 22055,
+      "since": 1752704491
     },
     "history": [
       {
@@ -33507,36 +33169,10 @@
       "port": "53",
       "timeout": 5
     },
-    "status": {
-      "isUp": true,
-      "lastCheck": 1779972751,
-      "lastResultDuration": 170
-    },
-    "stats": {
-      "allTime": {
-        "total": 22072,
-        "successful": 22061,
-        "uptime": 99.95,
-        "since": 1752704492,
-        "expected": 30299,
-        "coverage": 72.85
-      },
-      "30d": {
-        "total": 905,
-        "successful": 905,
-        "uptime": 100,
-        "expected": 2880,
-        "coverage": 31.42,
-        "since": 1777381461
-      },
-      "365d": {
-        "total": 22072,
-        "successful": 22061,
-        "uptime": 99.95,
-        "expected": 30299,
-        "coverage": 72.85,
-        "since": 1752704492
-      }
+    "allTime": {
+      "total": 22072,
+      "successful": 22061,
+      "since": 1752704492
     },
     "history": [
       {

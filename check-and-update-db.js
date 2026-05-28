@@ -4,7 +4,8 @@ const http = require('http');
 const net = require('net');
 const { URL } = require('url');
 
-const DB_PATH = process.env.DB_PATH || 'docs/db.json';
+const STATUS_PATH = process.env.STATUS_PATH || 'docs/status.json';
+const HISTORY_PATH = process.env.HISTORY_PATH || 'history.json';
 const CHECK_INTERVAL_SECONDS = Number(process.env.CHECK_INTERVAL_SECONDS || 15 * 60);
 const THIRTY_DAYS_SECONDS = 30 * 24 * 60 * 60;
 const THREE_SIXTY_FIVE_DAYS_SECONDS = 365 * 24 * 60 * 60;
@@ -108,6 +109,12 @@ function expectedChecksBetween(startTime, currentTime) {
   return Math.floor((currentTime - startTime) / CHECK_INTERVAL_SECONDS) + 1;
 }
 
+function getServiceKey(service) {
+  const config = service.config || service;
+
+  return `${config.type}|${config.address}|${config.port || ''}`;
+}
+
 function getDateKey(timestamp) {
   return new Date(timestamp * 1000).toISOString().slice(0, 10);
 }
@@ -181,9 +188,23 @@ function calculateWindowStats(history, currentTime, windowSeconds) {
   };
 }
 
-function addHistoryEntry(service, timestamp, isUp) {
+function calculateAllTimeStats(allTime, currentTime) {
+  const since = allTime.since || currentTime;
+  const expected = expectedChecksBetween(since, currentTime);
+
+  return {
+    total: allTime.total,
+    successful: allTime.successful,
+    uptime: calculateUptime(allTime.successful, allTime.total),
+    since,
+    expected,
+    coverage: calculateCoverage(allTime.total, expected)
+  };
+}
+
+function addHistoryEntry(historyService, timestamp, isUp) {
   const date = getDateKey(timestamp);
-  let bucket = service.history.find(entry => entry.date === date);
+  let bucket = historyService.history.find(entry => entry.date === date);
 
   if (!bucket) {
     bucket = {
@@ -194,7 +215,7 @@ function addHistoryEntry(service, timestamp, isUp) {
       lastCheck: timestamp,
       checks: ''
     };
-    service.history.push(bucket);
+    historyService.history.push(bucket);
   }
 
   bucket.total++;
@@ -204,151 +225,133 @@ function addHistoryEntry(service, timestamp, isUp) {
   bucket.firstCheck = Math.min(bucket.firstCheck, timestamp);
   bucket.lastCheck = Math.max(bucket.lastCheck, timestamp);
   appendEncodedCheck(bucket, timestamp, isUp);
-}
 
-function updateRollingStats(service, currentTime) {
-  service.history = (service.history || [])
-    .filter(bucket => bucket.lastCheck >= currentTime - THREE_SIXTY_FIVE_DAYS_SECONDS)
-    .sort((a, b) => a.firstCheck - b.firstCheck);
-
-  service.stats.allTime.since = service.stats.allTime.since || service.history[0]?.firstCheck || currentTime;
-  service.stats.allTime.expected = expectedChecksBetween(service.stats.allTime.since, currentTime);
-  service.stats.allTime.coverage = calculateCoverage(service.stats.allTime.total, service.stats.allTime.expected);
-  service.stats['30d'] = calculateWindowStats(service.history, currentTime, THIRTY_DAYS_SECONDS);
-  service.stats['365d'] = calculateWindowStats(service.history, currentTime, THREE_SIXTY_FIVE_DAYS_SECONDS);
-}
-
-function migrateChecksToHistory(checks) {
-  const history = [];
-
-  for (const check of checks) {
-    const timestamp = check.timestamp;
-    const date = getDateKey(timestamp);
-    let bucket = history.find(entry => entry.date === date);
-
-    if (!bucket) {
-      bucket = {
-        date,
-        total: 0,
-        successful: 0,
-        firstCheck: timestamp,
-        lastCheck: timestamp,
-        checks: ''
-      };
-      history.push(bucket);
-    }
-
-    bucket.total++;
-    if (check.success) {
-      bucket.successful++;
-    }
-    bucket.firstCheck = Math.min(bucket.firstCheck, timestamp);
-    bucket.lastCheck = Math.max(bucket.lastCheck, timestamp);
-    appendEncodedCheck(bucket, timestamp, check.success);
+  historyService.allTime.since = historyService.allTime.since || timestamp;
+  historyService.allTime.total++;
+  if (isUp) {
+    historyService.allTime.successful++;
   }
-
-  return history;
 }
 
-// Migration function for old structure
-function migrateServiceStructure(oldService) {
-  const total = oldService.totalChecks || oldService.checks?.total || 0;
-  const successful = oldService.successfulChecks || oldService.checks?.successful || 0;
+function sortHistory(historyService) {
+  historyService.history = (historyService.history || [])
+    .sort((a, b) => a.firstCheck - b.firstCheck);
+}
 
+function updateStats(service, historyService, currentTime) {
+  sortHistory(historyService);
+  service.stats.allTime = calculateAllTimeStats(historyService.allTime, currentTime);
+  service.stats['30d'] = calculateWindowStats(historyService.history, currentTime, THIRTY_DAYS_SECONDS);
+  service.stats['365d'] = calculateWindowStats(historyService.history, currentTime, THREE_SIXTY_FIVE_DAYS_SECONDS);
+}
+
+function createDefaultStats() {
   return {
-    config: {
-      address: oldService.address,
-      type: oldService.type,
-      port: oldService.port || null,
-      timeout: oldService.timeout || 5
+    allTime: {
+      total: 0,
+      successful: 0,
+      uptime: 100.0,
+      expected: 0,
+      coverage: 100.0,
+      since: 0
     },
-    status: {
-      isUp: oldService.isUp ?? true,
-      lastCheck: oldService.lastCheck || 0,
-      lastResultDuration: oldService.lastResultDuration || 0
+    '30d': {
+      total: 0,
+      successful: 0,
+      uptime: 100.0,
+      expected: 0,
+      coverage: 100.0,
+      since: 0
     },
-    stats: {
-      allTime: {
-        total,
-        successful,
-        uptime: calculateUptime(successful, total),
-        expected: 0,
-        coverage: 100.0,
-        since: 0
-      },
-      '30d': {
-        total: 0,
-        successful: 0,
-        uptime: 100.0,
-        expected: 0,
-        coverage: 100.0,
-        since: 0
-      },
-      '365d': {
-        total: 0,
-        successful: 0,
-        uptime: 100.0,
-        expected: 0,
-        coverage: 100.0,
-        since: 0
-      }
-    },
-    history: []
+    '365d': {
+      total: 0,
+      successful: 0,
+      uptime: 100.0,
+      expected: 0,
+      coverage: 100.0,
+      since: 0
+    }
   };
 }
 
-function normalizeService(service) {
-  if (!service.config) {
-    return migrateServiceStructure(service);
-  }
-
-  service.status = service.status || { isUp: true, lastCheck: 0, lastResultDuration: 0 };
-  service.stats = service.stats || {};
-  service.stats.allTime = service.stats.allTime || { total: 0, successful: 0 };
-  service.stats.allTime.uptime = calculateUptime(service.stats.allTime.successful, service.stats.allTime.total);
-  service.stats.allTime.since = service.stats.allTime.since || service.history?.[0]?.firstCheck || service.status.lastCheck || 0;
-  service.stats.allTime.expected = service.stats.allTime.expected || 0;
-  service.stats.allTime.coverage = service.stats.allTime.coverage || 100.0;
-
-  service.history = Array.isArray(service.history) ? service.history : migrateChecksToHistory(service.checks || []);
-  delete service.checks;
-  delete service.legacyStats;
-
-  return service;
+function normalizeStatusService(service) {
+  return {
+    config: service.config,
+    status: service.status || { isUp: true, lastCheck: 0, lastResultDuration: 0 },
+    stats: service.stats || createDefaultStats()
+  };
 }
 
-// Load and validate services
-function loadServices() {
-  if (!fs.existsSync(DB_PATH)) {
-    console.error('Database file not found');
-    process.exit(1);
-  }
+function normalizeHistoryService(historyService, statusService) {
+  const allTime = historyService?.allTime || statusService.stats.allTime || {};
 
-  const jsonContent = fs.readFileSync(DB_PATH, 'utf8');
-  let services;
-
-  try {
-    services = JSON.parse(jsonContent);
-  } catch (err) {
-    console.error('Database corrupted:', err.message);
-    process.exit(1);
-  }
-
-  if (!Array.isArray(services)) {
-    console.error('Invalid database structure');
-    process.exit(1);
-  }
-
-  return services.map(normalizeService);
+  return {
+    config: statusService.config,
+    allTime: {
+      total: allTime.total || 0,
+      successful: allTime.successful || 0,
+      since: allTime.since || statusService.status.lastCheck || 0
+    },
+    history: Array.isArray(historyService?.history) ? historyService.history : []
+  };
 }
 
-// Save services data
-function saveServices(services) {
+function readJsonFile(path, required = true) {
+  if (!fs.existsSync(path)) {
+    if (required) {
+      console.error(`${path} not found`);
+      process.exit(1);
+    }
+
+    return null;
+  }
+
   try {
-    fs.writeFileSync(DB_PATH, JSON.stringify(services, null, 2));
-    console.log('Database updated successfully');
+    return JSON.parse(fs.readFileSync(path, 'utf8'));
   } catch (err) {
-    console.error('Failed to save database:', err.message);
+    console.error(`${path} corrupted:`, err.message);
+    process.exit(1);
+  }
+}
+
+function loadStatusServices() {
+  const status = readJsonFile(STATUS_PATH);
+
+  if (!Array.isArray(status)) {
+    console.error('Invalid status database structure');
+    process.exit(1);
+  }
+
+  return status.map(normalizeStatusService);
+}
+
+function loadHistoryServices(statusServices) {
+  const history = readJsonFile(HISTORY_PATH);
+
+  if (!Array.isArray(history)) {
+    console.error('Invalid history database structure');
+    process.exit(1);
+  }
+
+  const historyByKey = new Map(history.map(service => [getServiceKey(service), service]));
+
+  return statusServices.map(statusService => {
+    const historyService = historyByKey.get(getServiceKey(statusService));
+
+    if (!historyService) {
+      console.error(`History missing for ${getServiceKey(statusService)}`);
+      process.exit(1);
+    }
+
+    return normalizeHistoryService(historyService, statusService);
+  });
+}
+
+function saveJsonFile(path, data) {
+  try {
+    fs.writeFileSync(path, JSON.stringify(data, null, 2));
+  } catch (err) {
+    console.error(`Failed to save ${path}:`, err.message);
     process.exit(1);
   }
 }
@@ -357,10 +360,13 @@ function saveServices(services) {
 async function main() {
   console.log('Starting uptime checks...');
 
-  const services = loadServices();
+  const services = loadStatusServices();
+  const historyServices = loadHistoryServices(services);
+  const historyByKey = new Map(historyServices.map(service => [getServiceKey(service), service]));
 
   for (const service of services) {
     const config = service.config;
+    const historyService = historyByKey.get(getServiceKey(service));
 
     console.log(`Checking ${config.address}${config.port ? ':' + config.port : ''}...`);
 
@@ -374,39 +380,26 @@ async function main() {
     const currentTime = Math.floor(Date.now() / 1000);
     const isUp = result.result === 'ConnectOK';
 
-    // Update service status
     service.status.lastResultDuration = result.duration;
     service.status.lastCheck = currentTime;
     service.status.isUp = isUp;
 
-    // Keep all-time as an aggregate, and use compact daily history for rolling windows.
-    service.stats.allTime.total++;
-    if (isUp) {
-      service.stats.allTime.successful++;
-    }
-    service.stats.allTime.uptime = calculateUptime(
-      service.stats.allTime.successful,
-      service.stats.allTime.total
-    );
-    service.stats.allTime.since = service.stats.allTime.since || currentTime;
-
-    addHistoryEntry(service, currentTime, isUp);
-    updateRollingStats(service, currentTime);
+    addHistoryEntry(historyService, currentTime, isUp);
+    updateStats(service, historyService, currentTime);
 
     const status = service.status.isUp ? 'UP' : 'DOWN';
     console.log(`${config.address}${config.port ? ':' + config.port : ''} - ${status} (${result.duration}ms)`);
 
-    // Alert if service is down
     if (!service.status.isUp) {
       console.warn(`🚨 SERVICE DOWN: ${config.address}${config.port ? ':' + config.port : ''}`);
     }
   }
 
-  saveServices(services);
+  saveJsonFile(STATUS_PATH, services);
+  saveJsonFile(HISTORY_PATH, historyServices);
   console.log('Uptime checks completed and data saved');
 }
 
-// Run the main function
 main().catch(err => {
   console.error('Error during uptime check:', err);
   process.exit(1);

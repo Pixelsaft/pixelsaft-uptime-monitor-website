@@ -1,6 +1,6 @@
 async function loadData () {
   try {
-    const response = await fetch(`./db.json?t=${Date.now()}`)
+    const response = await fetch(`./status.json?t=${Date.now()}`)
     const services = await response.json()
 
     updateServices(services)
