@@ -49,7 +49,7 @@ function getLongPeriodLabel(service) {
 }
 
 function formatPeriodStats(stats) {
-  if (!stats || typeof stats.uptime !== 'number' || typeof stats.coverage !== 'number') {
+  if (!stats || typeof stats.uptime !== 'number' || typeof stats.total !== 'number') {
     return [document.createTextNode('Unknown')]
   }
 
