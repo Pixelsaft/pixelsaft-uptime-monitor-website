@@ -31,22 +31,23 @@ function createServiceElement(service = null) {
     // Populate extended data
     element.querySelector('.response-time').textContent = `${service.status.lastResultDuration}ms`
     element.querySelector('.last-check').textContent = formatDate(service.status.lastCheck * 1000)
-    element.querySelector('.all-time-uptime').textContent = `${service.stats.allTime.uptime.toFixed(2)}%`
-    element.querySelector('.monitor-coverage-all-time').replaceChildren(...formatCoverage(service.stats.allTime))
-    element.querySelector('.monitor-coverage-30d').replaceChildren(...formatCoverage(service.stats['30d']))
-    element.querySelector('.monitor-coverage-365d').replaceChildren(...formatCoverage(service.stats['365d']))
+    element.querySelector('.stats-all-time').replaceChildren(...formatPeriodStats(service.stats.allTime))
+    element.querySelector('.stats-30d').replaceChildren(...formatPeriodStats(service.stats['30d']))
+    element.querySelector('.stats-365d').replaceChildren(...formatPeriodStats(service.stats['365d']))
   }
 
   return element
 }
 
-function formatCoverage(stats) {
-  if (!stats || typeof stats.expected !== 'number' || typeof stats.coverage !== 'number') {
+function formatPeriodStats(stats) {
+  if (!stats || typeof stats.uptime !== 'number' || typeof stats.coverage !== 'number') {
     return [document.createTextNode('Unknown')]
   }
 
   return [
-    document.createTextNode(`${stats.coverage.toFixed(2)}%`),
+    document.createTextNode(`${stats.uptime.toFixed(2)}% uptime`),
+    document.createElement('br'),
+    document.createTextNode(`${stats.coverage.toFixed(2)}% coverage`),
     document.createElement('br'),
     document.createTextNode(`(${stats.total}/${stats.expected} checks)`)
   ]
