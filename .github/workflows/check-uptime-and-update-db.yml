@@ -9,9 +9,6 @@ concurrency:
   group: uptime-monitor
   cancel-in-progress: false
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   check-uptime-and-update-db:
     runs-on: ubuntu-latest
@@ -41,11 +38,11 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docs/db.json
+          git add docs/status.json history.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore(db.json): update uptime data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+            git commit -m "chore(status): update uptime data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
             git pull --rebase origin main
             git push
           fi
