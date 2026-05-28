@@ -7,6 +7,8 @@ const { URL } = require('url');
 const STATUS_PATH = process.env.STATUS_PATH || 'docs/status.json';
 const HISTORY_PATH = process.env.HISTORY_PATH || 'history.json';
 const CHECK_INTERVAL_SECONDS = Number(process.env.CHECK_INTERVAL_SECONDS || 15 * 60);
+const CHECK_ATTEMPTS = Number(process.env.CHECK_ATTEMPTS || 3);
+const RETRY_DELAY_MS = Number(process.env.RETRY_DELAY_MS || 1000);
 const THIRTY_DAYS_SECONDS = 30 * 24 * 60 * 60;
 const THREE_SIXTY_FIVE_DAYS_SECONDS = 365 * 24 * 60 * 60;
 
@@ -93,6 +95,29 @@ function checkUrl(url, timeout = 5000) {
 
     req.end();
   });
+}
+
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function checkService(config) {
+  let lastResult;
+
+  for (let attempt = 1; attempt <= CHECK_ATTEMPTS; attempt++) {
+    lastResult = config.type === 'url'
+      ? await checkUrl(config.address, config.timeout * 1000)
+      : await checkHost(config.address, config.port, config.timeout * 1000);
+
+    if (lastResult.result === 'ConnectOK' || attempt === CHECK_ATTEMPTS) {
+      return lastResult;
+    }
+
+    console.warn(`Retrying ${config.address}${config.port ? ':' + config.port : ''} (${attempt}/${CHECK_ATTEMPTS})...`);
+    await wait(RETRY_DELAY_MS);
+  }
+
+  return lastResult;
 }
 
 function calculateUptime(successful, total) {
@@ -367,13 +392,7 @@ async function main() {
 
     console.log(`Checking ${config.address}${config.port ? ':' + config.port : ''}...`);
 
-    let result;
-    if (config.type === 'url') {
-      result = await checkUrl(config.address, config.timeout * 1000);
-    } else {
-      result = await checkHost(config.address, config.port, config.timeout * 1000);
-    }
-
+    const result = await checkService(config);
     const currentTime = Math.floor(Date.now() / 1000);
     const isUp = result.result === 'ConnectOK';
 
