@@ -49,7 +49,7 @@ function formatPeriodStats(stats) {
     document.createElement('br'),
     document.createTextNode(`${stats.coverage.toFixed(2)}% coverage`),
     document.createElement('br'),
-    document.createTextNode(`(${stats.total}/${stats.expected} checks)`)
+    document.createTextNode(`${stats.total}/${stats.expected} checks`)
   ]
 }
 
