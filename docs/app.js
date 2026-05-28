@@ -68,13 +68,29 @@ function formatDate(timestamp) {
 
 function updateServices (services) {
   const container = document.getElementById('app')
+  const openServices = new Set(
+    Array.from(container.querySelectorAll('.service details[open]'))
+      .map(details => details.dataset.serviceKey)
+      .filter(Boolean)
+  )
+
   container.removeAttribute('data-loading')
   container.innerHTML = '<ul></ul>'
   const ul = container.querySelector('ul')
 
   services.forEach(service => {
-    ul.appendChild(createServiceElement(service))
+    const serviceElement = createServiceElement(service)
+    const details = serviceElement.querySelector('details')
+    const serviceKey = getServiceKey(service)
+
+    details.dataset.serviceKey = serviceKey
+    details.open = openServices.has(serviceKey)
+    ul.appendChild(serviceElement)
   })
+}
+
+function getServiceKey (service) {
+  return `${service.config.type}|${service.config.address}|${service.config.port || ''}`
 }
 
 function getServiceType (service) {
