@@ -7,19 +7,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24138,
+      "total": 24159,
+      "successful": 24139,
       "since": 1752704487
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327577,
-        "lastCheck": 1758412095,
-        "checks": "wpu,29eu,49uu,63hu,7fyu,8gzu,9hou,a4ou,alnu,bdhu,c88u,cscu,dbou,e4iu,eyou,fi2u,g47u,gz5u,hteu,igyu,iyfu,jo6u,kgvu,kzuu,loiu,milu,nc7u,nx5u,ohzu,p8hu,q2du,qk1u,r83u,s0hu,sumu,tf0u,u0gu,us0u,vieu,w42u,ws8u,xphu,yiuu,zheu,10hgu,117ku,11p5u,12c1u,1343u,13xcu,14gqu,154cu,15w8u,16pzu,177su,17wcu,18pau,19jhu,1a3du,1anku,1bftu,1c70u,1crku,1dgbu,1eabu,1f47u,1fq2u,1g8au,1gzku,1hntu,1ibnu,1j09u,1jswu,1kmou,1l46u,1lrnu,1mjnu,1nb4u,1nvnu,1ok5u,1pbxu,1q5bu,1qopu,1rcau,1s4ru,1swgu,1tfuu,1u4fu"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -2939,6 +2931,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -2950,19 +2950,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24144,
+      "total": 24159,
+      "successful": 24145,
       "since": 1752704488
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327578,
-        "lastCheck": 1758412096,
-        "checks": "wqu,29fu,49uu,63hu,7fyu,8gzu,9hou,a4pu,alnu,bdhu,c88u,cscu,dbou,e4iu,eyou,fi2u,g47u,gz5u,hteu,igyu,iygu,jo7u,kgvu,kzuu,loiu,milu,nc7u,nx6u,oi0u,p8hu,q2eu,qk1u,r84u,s0iu,sumu,tf0u,u0hu,us0u,vieu,w42u,ws9u,xpiu,yiuu,zheu,10hgu,117ku,11p5u,12c2u,1343u,13xcu,14gqu,154cu,15w9u,16q0u,177su,17wcu,18pau,19jhu,1a3du,1anku,1bfuu,1c70u,1crku,1dgbu,1eacu,1f47u,1fq2u,1g8au,1gzku,1hntu,1ibou,1j0au,1jswu,1kmpu,1l46u,1lrnu,1mjou,1nb4u,1nvnu,1ok6u,1pbyu,1q5bu,1qopu,1rcbu,1s4ru,1swgu,1tfvu,1u4gu"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -5882,6 +5874,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -5893,19 +5893,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24143,
+      "total": 24159,
+      "successful": 24144,
       "since": 1752704488
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327578,
-        "lastCheck": 1758412096,
-        "checks": "wqu,29fu,49vu,63iu,7fyu,8h0u,9hou,a4pu,alnu,bdiu,c89u,cscu,dbpu,e4ju,eyou,fi2u,g47u,gz6u,hteu,igyu,iygu,jo7u,kgwu,kzuu,loju,mimu,nc7u,nx6u,oi0u,p8iu,q2eu,qk2u,r84u,s0iu,sumu,tf0u,u0hu,us1u,vieu,w43u,ws9u,xpiu,yivu,zheu,10hgu,117ku,11p5u,12c2u,1344u,13xdu,14gru,154du,15w9u,16q0u,177su,17wdu,18pbu,19jiu,1a3du,1anku,1bfuu,1c71u,1crku,1dgbu,1eacu,1f47u,1fq2u,1g8au,1gzku,1hntu,1ibou,1j0au,1jsxu,1kmpu,1l47u,1lrou,1mjou,1nb4u,1nvnu,1ok7u,1pbyu,1q5bu,1qopu,1rcbu,1s4ru,1swgu,1tfwu,1u4gu"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -8825,6 +8817,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -8836,19 +8836,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24146,
+      "total": 24159,
+      "successful": 24147,
       "since": 1752704488
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327578,
-        "lastCheck": 1758412096,
-        "checks": "wqu,29fu,49vu,63iu,7fyu,8h0u,9hpu,a4pu,alnu,bdiu,c89u,cscu,dbpu,e4ju,eyqu,fi3u,g48u,gz6u,hteu,igyu,iygu,jo8u,kgwu,kzvu,loju,mimu,nc8u,nx7u,oi0u,p8iu,q2eu,qk2u,r84u,s0iu,sunu,tf0u,u0iu,us1u,vifu,w43u,ws9u,xpju,yivu,zhfu,10hgu,117lu,11p6u,12c3u,1344u,13xdu,14gru,154du,15wau,16q0u,177su,17wdu,18pbu,19jiu,1a3eu,1anlu,1bfvu,1c71u,1crku,1dgcu,1eacu,1f48u,1fq3u,1g8bu,1gzlu,1hntu,1ibou,1j0au,1jsxu,1kmpu,1l47u,1lrou,1mjou,1nb4u,1nvnu,1ok8u,1pbyu,1q5cu,1qopu,1rcbu,1s4su,1swhu,1tfwu,1u4gu"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -11768,6 +11760,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -11779,19 +11779,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24144,
+      "total": 24159,
+      "successful": 24145,
       "since": 1752704489
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327578,
-        "lastCheck": 1758412097,
-        "checks": "wqu,29fu,49vu,63iu,7fzu,8h0u,9hpu,a4pu,alou,bdiu,c89u,csdu,dbpu,e4ju,eyqu,fi3u,g48u,gz6u,htfu,igzu,iygu,jo8u,kgwu,kzvu,loju,mimu,nc8u,nx7u,oi0u,p8iu,q2fu,qk2u,r84u,s0iu,sunu,tf1u,u0iu,us1u,vifu,w43u,ws9u,xpju,yivu,zhfu,10hgu,117lu,11p6u,12c3u,1344u,13xdu,14gsu,154du,15wbu,16q0u,177su,17wdu,18pbu,19jiu,1a3eu,1anlu,1bfvu,1c71u,1crku,1dgcu,1eacu,1f48u,1fq3u,1g8bu,1gzlu,1hnuu,1ibpu,1j0bu,1jsyu,1kmpu,1l47u,1lrou,1mjpu,1nb5u,1nvou,1ok8u,1pbyu,1q5cu,1qoqu,1rcbu,1s4su,1swhu,1tfwu,1u4hu"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -14711,6 +14703,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -14722,19 +14722,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24144,
+      "total": 24159,
+      "successful": 24145,
       "since": 1752704489
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327579,
-        "lastCheck": 1758412097,
-        "checks": "wru,29fu,49vu,63iu,7fzu,8h0u,9hpu,a4pu,alpu,bdiu,c8au,csdu,dbqu,e4ju,eyqu,fi3u,g48u,gz6u,htfu,ih0u,iygu,jo8u,kgwu,kzvu,loju,minu,nc9u,nx7u,oi1u,p8iu,q2fu,qk3u,r84u,s0ju,sunu,tf1u,u0iu,us1u,vifu,w44u,ws9u,xpju,yivu,zhfu,10hhu,117lu,11p6u,12c3u,1344u,13xdu,14gsu,154du,15wbu,16q1u,177su,17wdu,18pbu,19jiu,1a3eu,1anlu,1bfvu,1c71u,1crku,1dgcu,1eadu,1f48u,1fq3u,1g8cu,1gzmu,1hnuu,1ibpu,1j0bu,1jsyu,1kmpu,1l47u,1lrou,1mjpu,1nb5u,1nvou,1ok9u,1pbyu,1q5du,1qoqu,1rccu,1s4su,1swhu,1tfxu,1u4hu"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -17654,6 +17646,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -17665,19 +17665,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24146,
+      "total": 24159,
+      "successful": 24147,
       "since": 1752704489
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327579,
-        "lastCheck": 1758412097,
-        "checks": "wru,29gu,49vu,63iu,7fzu,8h0u,9hpu,a4pu,alpu,bdiu,c8au,csdu,dbqu,e4ju,eyqu,fi3u,g48u,gz7u,htfu,ih0u,iygu,jo8u,kgwu,kzvu,loju,miou,nc9u,nx8u,oi1u,p8iu,q2fu,qk3u,r84u,s0ju,sunu,tf1u,u0iu,us1u,vigu,w44u,ws9u,xpju,yiwu,zhfu,10hhu,117lu,11p6u,12c3u,1344u,13xdu,14gsu,154du,15wbu,16q1u,177tu,17wdu,18pbu,19jiu,1a3eu,1anlu,1bfvu,1c71u,1crku,1dgcu,1eadu,1f48u,1fq3u,1g8cu,1gzmu,1hnuu,1ibpu,1j0bu,1jsyu,1kmpu,1l47u,1lrou,1mjpu,1nb5u,1nvou,1ok9u,1pbyu,1q5du,1qoqu,1rccu,1s4su,1swhu,1tfxu,1u4hu"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -20597,6 +20589,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -20608,19 +20608,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24146,
+      "total": 24159,
+      "successful": 24147,
       "since": 1752704489
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327580,
-        "lastCheck": 1758412097,
-        "checks": "wsu,29gu,49vu,63ju,7fzu,8h0u,9hpu,a4qu,alpu,bdiu,c8au,csdu,dbqu,e4ju,eyqu,fi3u,g48u,gz7u,htfu,ih0u,iygu,jo9u,kgwu,kzvu,loju,miou,nc9u,nx8u,oi1u,p8iu,q2fu,qk3u,r85u,s0ju,sunu,tf1u,u0iu,us1u,vigu,w44u,ws9u,xpju,yiwu,zhfu,10hhu,117lu,11p6u,12c3u,1344u,13xeu,14gsu,154du,15wbu,16q1u,177tu,17wdu,18pbu,19jiu,1a3eu,1anlu,1bfvu,1c71u,1crku,1dgcu,1eadu,1f48u,1fq4u,1g8cu,1gzmu,1hnuu,1ibpu,1j0bu,1jsyu,1kmqu,1l48u,1lrou,1mjpu,1nb5u,1nvou,1ok9u,1pbzu,1q5eu,1qoqu,1rccu,1s4tu,1swhu,1tfxu,1u4hu"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -23540,6 +23532,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -23551,19 +23551,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24117,
+      "total": 24159,
+      "successful": 24118,
       "since": 1752704489
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327580,
-        "lastCheck": 1758412097,
-        "checks": "wsu,29gu,49vu,63ju,7fzu,8h1u,9hpu,a4qu,alpu,bdju,c8au,csdu,dbqu,e4ju,eyqu,fi3u,g48u,gz7u,htgu,ih0u,iyhu,jo9u,kgwu,kzvu,loku,miou,nc9u,nx8u,oi1u,p8ju,q2fu,qk3u,r85u,s0ju,sunu,tf1u,u0iu,us2u,vigu,w44u,wsau,xpju,yiwu,zhgu,10hhu,117lu,11p7u,12c3u,1345u,13xeu,14gsu,154du,15wbu,16q1u,177tu,17wdu,18pbu,19jju,1a3fu,1anmu,1bfwu,1c72u,1crlu,1dgcu,1eadu,1f48u,1fq4u,1g8cu,1gzmu,1hnuu,1ibpu,1j0bu,1jsyu,1kmqu,1l48u,1lrou,1mjpu,1nb5u,1nvou,1okau,1pbzu,1q5eu,1qoqu,1rccu,1s4tu,1swhu,1tfxu,1u4hu"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -26483,6 +26475,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -26494,19 +26494,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24138,
+      "total": 24159,
+      "successful": 24139,
       "since": 1752704491
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327581,
-        "lastCheck": 1758412099,
-        "checks": "wtu,29hu,49wu,63ku,7g0u,8h2u,9hqu,a4ru,alqu,bdju,c8bu,cseu,dbru,e4ku,eyru,fi4u,g49u,gz8u,hthu,ih1u,iyiu,joau,kgxu,kzxu,lolu,mipu,ncau,nx9u,oi3u,p8ku,q2hu,qk4u,r86u,s0ku,suou,tf2u,u0ju,us3u,vihu,w46u,wsau,xplu,yixu,zhhu,10hiu,117mu,11p9u,12c5u,1346u,13xfu,14gtu,154eu,15wdu,16q2u,177uu,17wfu,18pcu,19jju,1a3gu,1annu,1bg1u,1c73u,1crlu,1dgdu,1eaeu,1f49u,1fq5u,1g8du,1gznu,1hnvu,1ibqu,1j0du,1jszu,1kmru,1l49u,1lrqu,1mjqu,1nb6u,1nvpu,1okbu,1pc0u,1q5fu,1qoru,1rcdu,1s4uu,1swiu,1tfyu,1u4ju"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -29426,6 +29418,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -29437,19 +29437,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24158,
+      "total": 24159,
+      "successful": 24159,
       "since": 1752704491
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327581,
-        "lastCheck": 1758412099,
-        "checks": "wtu,29hu,49xu,63ku,7g1u,8h2u,9hru,a4ru,alqu,bdku,c8bu,cseu,dbru,e4ku,eysu,fi5u,g49u,gz8u,hthu,ih1u,iyiu,jobu,kgxu,kzxu,lolu,miqu,ncbu,nxau,oi3u,p8lu,q2hu,qk4u,r87u,s0lu,supu,tf3u,u0ku,us3u,viiu,w46u,wsbu,xpmu,yixu,zhhu,10hiu,117mu,11p9u,12c6u,1346u,13xfu,14gtu,154fu,15wdu,16q2u,177vu,17wgu,18pdu,19jku,1a3gu,1anou,1bg2u,1c73u,1crmu,1dgeu,1eafu,1f49u,1fq5u,1g8du,1gznu,1hnvu,1ibru,1j0du,1jszu,1kmru,1l49u,1lrqu,1mjru,1nb6u,1nvqu,1okbu,1pc0u,1q5gu,1qoru,1rcdu,1s4uu,1swju,1tfyu,1u4ju"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -32369,6 +32361,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -32380,19 +32380,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24158,
+      "total": 24159,
+      "successful": 24159,
       "since": 1752704491
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327581,
-        "lastCheck": 1758412100,
-        "checks": "wtu,29hu,49xu,63ku,7g1u,8h2u,9hru,a4ru,alru,bdku,c8bu,csfu,dbru,e4lu,eysu,fi6u,g4au,gz8u,htiu,ih1u,iyiu,jocu,kgyu,kzyu,lolu,miqu,ncbu,nxau,oi3u,p8lu,q2iu,qk4u,r87u,s0lu,supu,tf3u,u0ku,us3u,viiu,w47u,wsbu,xpnu,yixu,zhiu,10hiu,117nu,11pau,12c6u,1347u,13xfu,14gtu,154fu,15wdu,16q3u,177vu,17wgu,18pdu,19jku,1a3gu,1anpu,1bg2u,1c73u,1crmu,1dgeu,1eafu,1f49u,1fq5u,1g8eu,1gzou,1hnvu,1ibru,1j0eu,1jt0u,1kmsu,1l49u,1lrqu,1mjru,1nb6u,1nvqu,1okcu,1pc0u,1q5hu,1qosu,1rcdu,1s4vu,1swku,1tfyu,1u4ku"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -35312,6 +35304,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -35323,19 +35323,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24151,
+      "total": 24159,
+      "successful": 24152,
       "since": 1752704491
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327581,
-        "lastCheck": 1758412100,
-        "checks": "wtu,29hu,49xu,63ku,7g1u,8h3u,9hru,a4su,alru,bdku,c8bu,csfu,dbru,e4lu,eysu,fi6u,g4au,gz9u,htiu,ih2u,iyiu,jocu,kgyu,kzyu,lomu,miqu,nccu,nxau,oi4u,p8lu,q2iu,qk4u,r88u,s0mu,supu,tf3u,u0ku,us3u,viiu,w47u,wscu,xpou,yixu,zhiu,10hiu,117nu,11pbu,12c7u,1347u,13xgu,14guu,154fu,15weu,16q3u,177wu,17whu,18peu,19jku,1a3gu,1anqu,1bg2u,1c73u,1crmu,1dgeu,1eafu,1f4au,1fq6u,1g8eu,1gzou,1hnwu,1ibsu,1j0fu,1jt0u,1kmsu,1l49u,1lrqu,1mjru,1nb7u,1nvru,1okcu,1pc1u,1q5hu,1qosu,1rceu,1s4vu,1swku,1tfzu,1u4ku"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -38255,6 +38247,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   },
@@ -38266,19 +38266,11 @@
       "timeout": 5
     },
     "allTime": {
-      "total": 24158,
-      "successful": 24158,
+      "total": 24159,
+      "successful": 24159,
       "since": 1752704492
     },
     "history": [
-      {
-        "date": "2025-09-20",
-        "total": 88,
-        "successful": 88,
-        "firstCheck": 1758327581,
-        "lastCheck": 1758412100,
-        "checks": "wtu,29hu,49xu,63ku,7g1u,8h3u,9hru,a4su,alru,bdlu,c8bu,csfu,dbsu,e4lu,eysu,fi6u,g4au,gz9u,htiu,ih2u,iyiu,jodu,kgyu,kzyu,lomu,miru,nccu,nxau,oi4u,p8mu,q2iu,qk5u,r88u,s0mu,supu,tf3u,u0ku,us4u,viju,w47u,wscu,xpou,yixu,zhju,10hju,117nu,11pbu,12c7u,1347u,13xgu,14guu,154fu,15weu,16q3u,177wu,17whu,18peu,19jlu,1a3hu,1anqu,1bg2u,1c73u,1crmu,1dgeu,1eafu,1f4au,1fq6u,1g8eu,1gzou,1hnwu,1ibsu,1j0fu,1jt0u,1kmsu,1l49u,1lrqu,1mjru,1nb7u,1nvru,1okdu,1pc1u,1q5iu,1qotu,1rceu,1s4vu,1swku,1tfzu,1u4ku"
-      },
       {
         "date": "2025-09-21",
         "total": 87,
@@ -41198,6 +41190,14 @@
         "firstCheck": 1789866000,
         "lastCheck": 1789943400,
         "checks": "2s0u,hd0u,vy0u,14z0u,1db0u,1ky0u,1qi0u"
+      },
+      {
+        "date": "2026-09-21",
+        "total": 1,
+        "successful": 1,
+        "firstCheck": 1789950600,
+        "lastCheck": 1789950600,
+        "checks": "1e0u"
       }
     ]
   }
